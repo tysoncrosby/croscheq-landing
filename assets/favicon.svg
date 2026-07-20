@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="16 18 64 64">
+  <defs>
+    <linearGradient id="tick" x1="26" y1="67" x2="70" y2="33" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF6B35"/><stop offset="1" stop-color="#FFC857"/>
+    </linearGradient>
+  </defs>
+  <path d="M26 55 L38 67 L70 33" fill="none" stroke="url(#tick)" stroke-width="12"
+        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/>
+</svg>
