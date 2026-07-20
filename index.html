@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CrosCheq · Coming soon</title>
+  <meta name="description" content="CrosCheq · coming soon.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <meta property="og:title" content="CrosCheq">
+  <meta property="og:description" content="Coming soon.">
+  <meta name="theme-color" content="#0B1730">
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@500&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html,body{height:100%;}
+    body{
+      min-height:100vh; min-height:100dvh; position:relative; overflow:hidden;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      text-align:center; padding:40px 24px;
+      background:
+        radial-gradient(58% 46% at 50% 42%, rgba(255,107,53,0.18), transparent 62%),
+        linear-gradient(160deg, #18294D 0%, #0B1730 100%);
+      background-attachment:fixed;
+      font-family:'General Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      -webkit-font-smoothing:antialiased;
+    }
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);border:0;}
+
+    /* tick burst — scattered ticks around the lockup */
+    .burst{position:fixed; inset:0; overflow:hidden; pointer-events:none; z-index:0;}
+    .t{position:absolute; height:auto; --r:0deg;
+       transform:rotate(var(--r)); transform-origin:center;
+       animation:pop .6s cubic-bezier(.2,.8,.2,1) both;}
+    @keyframes pop{ from{opacity:0; transform:rotate(var(--r)) scale(.2);}
+                    to{opacity:1; transform:rotate(var(--r)) scale(1);} }
+
+    .stage{position:relative; z-index:1; display:flex; flex-direction:column; align-items:center;}
+    .lockup{
+      width:min(72vw, 360px); height:auto; display:block;
+      filter:drop-shadow(0 24px 60px rgba(0,0,0,0.45));
+      animation:rise .9s cubic-bezier(.2,.7,.2,1) both;
+    }
+    .soon{
+      margin-top:46px; font-size:14px; font-weight:500;
+      letter-spacing:.34em; text-transform:uppercase;
+      color:rgba(255,255,255,0.5);
+      animation:rise 1s .12s cubic-bezier(.2,.7,.2,1) both;
+    }
+    @keyframes rise{ from{opacity:0; transform:translateY(14px);} to{opacity:1; transform:none;} }
+
+    @media (max-width:600px){
+      .soon{letter-spacing:.28em; font-size:12.5px; margin-top:38px;}
+      .t.inner{display:none;}   /* thin the scatter so it never crowds the lockup */
+    }
+    @media (prefers-reduced-motion: reduce){
+      .lockup,.soon,.t{animation:none;}
+      .t{opacity:1;}
+    }
+  </style>
+</head>
+<body>
+  <!-- reusable tick shape (exact brand geometry) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="bt" viewBox="0 0 100 100">
+    <path d="M26 55 L38 67 L70 33" fill="none" stroke="currentColor" stroke-width="12"
+          stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/>
+  </symbol></svg>
+
+  <div class="burst" aria-hidden="true">
+    <!-- left field -->
+    <svg class="t"       style="left:9%;  top:20%; width:42px; color:#FF6B35;                --r:-14deg; animation-delay:.12s"><use href="#bt"/></svg>
+    <svg class="t inner" style="left:17%; top:33%; width:30px; color:#FFC857;                --r:8deg;   animation-delay:.20s"><use href="#bt"/></svg>
+    <svg class="t"       style="left:5%;  top:45%; width:34px; color:#E4572E;                --r:10deg;  animation-delay:.26s"><use href="#bt"/></svg>
+    <svg class="t inner" style="left:22%; top:56%; width:30px; color:rgba(255,200,87,.6);    --r:-10deg; animation-delay:.32s"><use href="#bt"/></svg>
+    <svg class="t"       style="left:11%; top:71%; width:36px; color:#FF6B35;                --r:12deg;  animation-delay:.38s"><use href="#bt"/></svg>
+    <svg class="t inner" style="left:31%; top:14%; width:26px; color:rgba(255,107,53,.55);   --r:-8deg;  animation-delay:.30s"><use href="#bt"/></svg>
+    <svg class="t"       style="left:3%;  top:31%; width:24px; color:rgba(255,255,255,.13);  --r:6deg;   animation-delay:.16s"><use href="#bt"/></svg>
+    <!-- right field -->
+    <svg class="t"       style="right:9%;  top:18%; width:44px; color:#FF6B35;               --r:12deg;  animation-delay:.16s"><use href="#bt"/></svg>
+    <svg class="t inner" style="right:17%; top:30%; width:30px; color:#E4572E;               --r:-10deg; animation-delay:.24s"><use href="#bt"/></svg>
+    <svg class="t"       style="right:5%;  top:41%; width:34px; color:#FFC857;               --r:8deg;   animation-delay:.30s"><use href="#bt"/></svg>
+    <svg class="t inner" style="right:21%; top:53%; width:30px; color:rgba(255,200,87,.6);   --r:-8deg;  animation-delay:.36s"><use href="#bt"/></svg>
+    <svg class="t"       style="right:8%;  top:65%; width:40px; color:#FFC857;               --r:10deg;  animation-delay:.42s"><use href="#bt"/></svg>
+    <svg class="t inner" style="right:30%; top:80%; width:26px; color:rgba(255,107,53,.55);  --r:6deg;   animation-delay:.44s"><use href="#bt"/></svg>
+    <svg class="t"       style="right:4%;  top:72%; width:24px; color:rgba(255,255,255,.13); --r:-6deg;  animation-delay:.22s"><use href="#bt"/></svg>
+    <!-- below the wordmark -->
+    <svg class="t inner" style="left:42%; top:88%; width:24px; color:rgba(255,200,87,.5);    --r:-6deg;  animation-delay:.48s"><use href="#bt"/></svg>
+  </div>
+
+  <div class="stage">
+    <h1 class="sr-only">CrosCheq</h1>
+    <img class="lockup" src="assets/lockup.png" alt="CrosCheq" width="360" height="254">
+    <div class="soon">Coming soon</div>
+  </div>
+</body>
+</html>
