@@ -866,6 +866,7 @@ a { color: inherit; text-decoration: none; }
 /* ── Contact ───────────────────────────────────────────────────── */
 
 .contact {
+  background: var(--surface-2);
   padding: 96px 32px;
   text-align: center;
 }
