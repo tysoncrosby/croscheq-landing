@@ -506,6 +506,14 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* App-window frame: renders the real app page (off-white) */
+.feature-mock-link {
+  display: block;
+  border-radius: 16px;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.feature-mock-link:hover { transform: translateY(-2px); }
+.feature-mock-link:hover .app-window { box-shadow: var(--shadow-lg, var(--shadow-md)); }
+
 .app-window {
   background: var(--off-white);
   border: 1px solid var(--line-strong);
