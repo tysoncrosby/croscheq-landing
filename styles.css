@@ -163,6 +163,7 @@ a { color: inherit; text-decoration: none; }
 /* Text-only hero (sub-pages with no dashboard visual) */
 .hero-solo .hero-content { display: block; }
 .hero-solo .hero-inner { max-width: 720px; margin: 0 auto; text-align: center; }
+.hero-solo .hero-sub { margin-left: auto; margin-right: auto; }
 .hero-solo .hero-actions { justify-content: center; }
 .hero-solo { padding-bottom: 64px; }
 
