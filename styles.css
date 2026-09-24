@@ -473,6 +473,11 @@ a { color: inherit; text-decoration: none; }
   gap: 72px;
 }
 
+/* Single-row feature (sub-pages): keep text and mockup paired together
+   instead of stretched across the full width with an off-centre gap. */
+.features-solo { max-width: 980px; }
+.features-solo .feature-row { grid-template-columns: 0.9fr 1fr; }
+
 .feature-row {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
