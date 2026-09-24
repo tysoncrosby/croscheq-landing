@@ -786,6 +786,36 @@ a { color: inherit; text-decoration: none; }
 .mk-rc-foot-label { font-size: 11px; color: var(--warm-grey); }
 .mk-rc-foot-val { font-size: 11px; font-weight: 600; color: var(--navy); font-feature-settings: 'tnum'; }
 
+/* ── Turnover today hero (matches app's TurnoverTodayHero) ── */
+.tn-hero { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 100%); border-radius: 14px; padding: 18px 20px; color: #fff; margin-top: 2px; }
+.tn-eyebrow { display: flex; align-items: center; gap: 7px; font-size: 11px; letter-spacing: 0.03em; color: rgba(255, 255, 255, 0.65); margin-bottom: 10px; }
+.tn-live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.25); flex-shrink: 0; }
+.tn-total-row { display: flex; align-items: flex-end; gap: 12px; flex-wrap: wrap; }
+.tn-total { font-size: 32px; font-weight: 600; letter-spacing: -0.02em; font-feature-settings: 'tnum'; }
+.tn-total .c { font-size: 18px; font-weight: 500; color: rgba(255, 255, 255, 0.55); }
+.tn-pace { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 600; padding: 4px 9px; border-radius: 999px; background: rgba(74, 138, 94, 0.2); color: #86dba3; white-space: nowrap; }
+.tn-pace svg { width: 9px; height: 9px; }
+.tn-weekly { margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, 0.12); display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.tn-weekly-label { font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255, 255, 255, 0.5); }
+.tn-weekly-val { font-size: 16px; font-weight: 600; margin-top: 2px; font-feature-settings: 'tnum'; }
+.tn-tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 12px; }
+.tn-tile { background: rgba(255, 255, 255, 0.07); border-radius: 9px; padding: 8px 10px; }
+.tn-tile .l { font-size: 9px; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(255, 255, 255, 0.5); }
+.tn-tile .v { font-size: 13px; font-weight: 600; margin-top: 3px; font-feature-settings: 'tnum'; }
+
+.tn-dayparts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 10px; }
+.tn-dp { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 10px 11px; }
+.tn-dp-head { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-bottom: 6px; }
+.tn-dp-name { font-size: 11px; font-weight: 600; color: var(--navy); }
+.tn-dp-pill { font-size: 8.5px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; padding: 2px 6px; border-radius: 999px; flex-shrink: 0; }
+.tn-dp-pill.done { background: rgba(74, 138, 94, 0.14); color: var(--green); }
+.tn-dp-pill.live { background: rgba(255, 107, 53, 0.14); color: var(--orange); }
+.tn-dp-pill.scheduled { background: var(--surface-2); color: var(--warm-grey); }
+.tn-dp-val { font-size: 14px; font-weight: 600; color: var(--navy); font-feature-settings: 'tnum'; }
+.tn-dp-sub { font-size: 10px; color: var(--warm-grey); margin-top: 1px; }
+.tn-dp-bar { height: 4px; border-radius: 2px; background: var(--surface-2); margin-top: 7px; overflow: hidden; }
+.tn-dp-bar span { display: block; height: 100%; background: var(--orange); }
+
 /* ── Integrations ──────────────────────────────────────────────── */
 
 .integrations {

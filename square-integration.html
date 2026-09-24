@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
   <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
   <link href="https://api.fontshare.com/v2/css?f[]=space-grotesk@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=29" />
+  <link rel="stylesheet" href="styles.css?v=30" />
 </head>
 <body>
   <header class="nav">
@@ -114,14 +114,62 @@
                 </div>
 
                 <div class="mk-head">
-                  <div class="mk-crumb">Turnover / Today</div>
-                  <h4 class="mk-title">Takings <span class="muted">· Sat 18 Jul</span></h4>
+                  <div class="mk-crumb">Turnover</div>
+                  <h4 class="mk-title">Today <span class="muted">· Sat 18 Jul</span></h4>
                 </div>
 
-                <div class="mk-rc-tiles">
-                  <div class="mk-rc-tile"><div class="mk-rc-label">Takings today</div><div class="mk-rc-value">$5,182</div><div class="mk-rc-sub">Synced from Square</div></div>
-                  <div class="mk-rc-tile"><div class="mk-rc-label">vs forecast</div><div class="mk-rc-value good">102%</div><div class="mk-rc-sub">333 transactions</div></div>
-                  <div class="mk-rc-tile"><div class="mk-rc-label">Wage cost</div><div class="mk-rc-value">31.4%</div><div class="mk-rc-sub">Against today's takings</div></div>
+                <div class="tn-hero">
+                  <div class="tn-eyebrow"><span class="tn-live-dot"></span>Today's takings · live from Square</div>
+                  <div class="tn-total-row">
+                    <div class="tn-total">$3,186<span class="c">.40</span></div>
+                    <span class="tn-pace">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+                      8% vs forecast
+                    </span>
+                  </div>
+                  <div class="tn-weekly">
+                    <div>
+                      <div class="tn-weekly-label">Weekly projected</div>
+                      <div class="tn-weekly-val">$21,450</div>
+                    </div>
+                    <span class="tn-pace">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+                      +$1,200 vs forecast
+                    </span>
+                  </div>
+                  <div class="tn-tiles">
+                    <div class="tn-tile"><div class="l">Forecast</div><div class="v">$2,950.00</div></div>
+                    <div class="tn-tile"><div class="l">Transactions</div><div class="v">142</div></div>
+                    <div class="tn-tile"><div class="l">Avg ticket</div><div class="v">$22.43</div></div>
+                    <div class="tn-tile"><div class="l">Last sale</div><div class="v">4:52 pm</div></div>
+                  </div>
+                </div>
+
+                <div class="tn-dayparts">
+                  <div class="tn-dp">
+                    <div class="tn-dp-head"><span class="tn-dp-name">Open to 9am</span><span class="tn-dp-pill done">Done</span></div>
+                    <div class="tn-dp-val">$412</div>
+                    <div class="tn-dp-sub">Forecast $380</div>
+                    <div class="tn-dp-bar"><span style="width:100%"></span></div>
+                  </div>
+                  <div class="tn-dp">
+                    <div class="tn-dp-head"><span class="tn-dp-name">Mid morning</span><span class="tn-dp-pill done">Done</span></div>
+                    <div class="tn-dp-val">$685</div>
+                    <div class="tn-dp-sub">Forecast $620</div>
+                    <div class="tn-dp-bar"><span style="width:100%"></span></div>
+                  </div>
+                  <div class="tn-dp">
+                    <div class="tn-dp-head"><span class="tn-dp-name">Lunch</span><span class="tn-dp-pill live">Live</span></div>
+                    <div class="tn-dp-val">$1,340</div>
+                    <div class="tn-dp-sub">Forecast $1,180</div>
+                    <div class="tn-dp-bar"><span style="width:100%"></span></div>
+                  </div>
+                  <div class="tn-dp">
+                    <div class="tn-dp-head"><span class="tn-dp-name">Afternoon</span><span class="tn-dp-pill scheduled">Scheduled</span></div>
+                    <div class="tn-dp-val">&mdash;</div>
+                    <div class="tn-dp-sub">Forecast $770</div>
+                    <div class="tn-dp-bar"><span style="width:0%"></span></div>
+                  </div>
                 </div>
               </div>
             </div>
