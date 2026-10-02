@@ -1097,6 +1097,49 @@ select.form-input {
   margin: 0;
 }
 
+.form-error {
+  font-size: 13px;
+  color: var(--red);
+  margin: 2px 0 0;
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  filter: none;
+}
+
+.apply-success {
+  text-align: center;
+  padding: 24px 0 8px;
+}
+.apply-success-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--green-soft);
+  color: var(--green);
+  font-size: 20px;
+  font-weight: 700;
+}
+.apply-success-title {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px;
+  color: var(--navy);
+}
+.apply-success-body {
+  font-size: 15px;
+  line-height: 1.55;
+  color: rgba(15, 31, 61, 0.72);
+  margin: 0;
+}
+
 /* ── Footer ────────────────────────────────────────────────────── */
 
 .footer {

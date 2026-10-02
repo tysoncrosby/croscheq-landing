@@ -25,7 +25,27 @@
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
   <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
   <link href="https://api.fontshare.com/v2/css?f[]=space-grotesk@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=32" />
+  <link rel="stylesheet" href="styles.css?v=33" />
+
+  <!-- Meta Pixel -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '28328709780088742');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=28328709780088742&ev=PageView&noscript=1"
+  /></noscript>
+  <script src="assets/meta-tracking.js"></script>
+  <script>
+    MetaTracking.pageView();
+  </script>
 </head>
 <body>
   <header class="nav">
@@ -55,15 +75,15 @@
       </p>
 
       <!--
-        Form action: replace ACTION_URL with your Formspree (or similar)
-        endpoint. Until then, the form falls back to a mailto: submission so
-        nothing 404s. Setup steps in README.md.
+        Submission is handled via AJAX in the script at the bottom of this
+        page so we can fire the CompleteRegistration conversion only after a
+        real successful submission, not on button click.
       -->
       <form
+        id="apply-form"
         class="apply-form"
-        action="mailto:support@crosbyops.com"
+        action="https://formspree.io/f/xljdkqre"
         method="POST"
-        enctype="text/plain"
       >
         <div class="form-row two-col">
           <div>
@@ -126,8 +146,20 @@
           <p class="form-fineprint">
             We will only use these details to get back to you. No marketing list.
           </p>
+          <p id="apply-error" class="form-error" hidden>
+            Something went wrong sending your request — please try again, or
+            email <a href="mailto:support@croscheq.com">support@croscheq.com</a> directly.
+          </p>
         </div>
       </form>
+
+      <div id="apply-success" class="apply-success" hidden>
+        <div class="apply-success-icon" aria-hidden="true">&#10003;</div>
+        <h2 class="apply-success-title">Request received.</h2>
+        <p class="apply-success-body">
+          Thanks — we will be in touch within two business days. Keep an eye on your inbox.
+        </p>
+      </div>
       </div>
       </div>
   </main>
@@ -153,6 +185,46 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear()
+
+    ;(function () {
+      var form = document.getElementById('apply-form')
+      var successEl = document.getElementById('apply-success')
+      var errorEl = document.getElementById('apply-error')
+      var submitBtn = form.querySelector('button[type="submit"]')
+      var submitting = false
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault()
+        if (submitting) return
+        submitting = true
+        errorEl.hidden = true
+        submitBtn.disabled = true
+        submitBtn.textContent = 'Sending…'
+
+        var emailField = form.querySelector('#email')
+        var emailValue = emailField ? emailField.value : ''
+
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        })
+          .then(function (res) {
+            if (!res.ok) throw new Error('submission failed')
+            form.style.display = 'none'
+            successEl.hidden = false
+            if (window.MetaTracking) {
+              MetaTracking.lead(emailValue, 'CompleteRegistration')
+            }
+          })
+          .catch(function () {
+            submitting = false
+            submitBtn.disabled = false
+            submitBtn.textContent = 'Send request'
+            errorEl.hidden = false
+          })
+      })
+    })()
   </script>
 </body>
 </html>

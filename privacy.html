@@ -164,6 +164,26 @@
       .footer-inner { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
     }
   </style>
+
+  <!-- Meta Pixel -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '28328709780088742');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=28328709780088742&ev=PageView&noscript=1"
+  /></noscript>
+  <script src="assets/meta-tracking.js"></script>
+  <script>
+    MetaTracking.pageView();
+  </script>
 </head>
 <body>
   <header class="nav">
@@ -314,10 +334,22 @@
 
     <h2>Cookies and similar technologies</h2>
     <p>
-      The web version of CrosCheq uses local storage and session
-      cookies set by Supabase to keep you signed in and to remember your
-      preferences (such as the week and store you last viewed). No
-      third-party advertising or analytics cookies are set.
+      The web version of CrosCheq (app.croscheq.com) uses local storage and
+      session cookies set by Supabase to keep you signed in and to remember
+      your preferences (such as the week and store you last viewed). No
+      third-party advertising or analytics cookies are set inside the app.
+    </p>
+    <p>
+      Our marketing site (croscheq.com) uses the Meta Pixel and Meta
+      Conversions API to measure the performance of our Facebook and
+      Instagram advertising. This may set cookies in your browser and share
+      limited information with Meta, such as the page you visited and, for
+      the Request Access form, a one-way cryptographic hash of your email
+      address, which Meta uses to match ad engagement to form submissions.
+      We do not send Meta your name, venue details, or anything else you
+      enter in the form. You can opt out of personalised advertising at any
+      time via Meta's ad preferences at
+      <a href="https://www.facebook.com/adpreferences">facebook.com/adpreferences</a>.
     </p>
 
     <h2>Changes to this policy</h2>

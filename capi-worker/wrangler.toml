@@ -1,0 +1,10 @@
+name = "croscheq-capi"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+META_PIXEL_ID = "28328709780088742"
+ALLOWED_ORIGIN = "https://croscheq.com"
+
+# Set the access token as a secret (never in this file, never committed):
+#   wrangler secret put META_CONVERSIONS_API_ACCESS_TOKEN
