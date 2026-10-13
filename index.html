@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
   <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
   <link href="https://api.fontshare.com/v2/css?f[]=space-grotesk@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=33" />
+  <link rel="stylesheet" href="styles.css?v=35" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -77,6 +77,7 @@
       <span class="brand-text"><span class="wm">CROS<span class="cheq">CHEQ</span></span></span>
     </a>
     <nav class="nav-links">
+      <a href="#try" class="nav-link">Try it</a>
       <a href="#what" class="nav-link">What it does</a>
       <a href="#built-for" class="nav-link">Built for</a>
       <a href="apply.html" class="nav-link">Request access</a>
@@ -232,6 +233,74 @@
         </div>
       </div>
       </div>
+    </section>
+
+    <section id="try" class="demo" aria-labelledby="demo-title">
+      <div class="section-head">
+        <div class="eyebrow">Try it</div>
+        <h2 class="section-title" id="demo-title">Build tomorrow's roster. Watch wage cost move.</h2>
+        <p class="demo-lede">
+          Tap shifts on and off, or drag the sales forecast. CrosCheq shows
+          wage cost against sales while you build, not after the pay run.
+        </p>
+      </div>
+
+      <div class="demo-card" id="roster-demo">
+        <div class="demo-top">
+          <div class="demo-day"><b>Saturday</b> &middot; Harbourview</div>
+          <div class="demo-sales">
+            <label for="demo-sales">Forecast sales</label>
+            <input type="range" id="demo-sales" min="2500" max="6500" step="100" value="4200" />
+            <output id="demo-sales-out" for="demo-sales">$4,200</output>
+          </div>
+        </div>
+
+        <div class="demo-body">
+          <ul class="demo-staff">
+            <li><button type="button" class="demo-shift" aria-pressed="true" data-hrs="8" data-rate="38"><span class="demo-tick" aria-hidden="true"><svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3.2L13 5"/></svg></span><span class="demo-who"><span class="demo-name">Maya</span><span class="demo-role">Barista &middot; 6am&ndash;2pm</span></span><span class="demo-cost">$304</span></button></li>
+            <li><button type="button" class="demo-shift" aria-pressed="true" data-hrs="8" data-rate="40"><span class="demo-tick" aria-hidden="true"><svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3.2L13 5"/></svg></span><span class="demo-who"><span class="demo-name">Liam</span><span class="demo-role">Kitchen &middot; 6am&ndash;2pm</span></span><span class="demo-cost">$320</span></button></li>
+            <li><button type="button" class="demo-shift" aria-pressed="true" data-hrs="8" data-rate="36"><span class="demo-tick" aria-hidden="true"><svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3.2L13 5"/></svg></span><span class="demo-who"><span class="demo-name">Sophie</span><span class="demo-role">Floor &middot; 7am&ndash;3pm</span></span><span class="demo-cost">$288</span></button></li>
+            <li><button type="button" class="demo-shift" aria-pressed="true" data-hrs="8" data-rate="36"><span class="demo-tick" aria-hidden="true"><svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3.2L13 5"/></svg></span><span class="demo-who"><span class="demo-name">Jordan</span><span class="demo-role">Floor &middot; 9am&ndash;5pm</span></span><span class="demo-cost">$288</span></button></li>
+            <li><button type="button" class="demo-shift" aria-pressed="true" data-hrs="6" data-rate="40"><span class="demo-tick" aria-hidden="true"><svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3.2L13 5"/></svg></span><span class="demo-who"><span class="demo-name">Daniel</span><span class="demo-role">Kitchen &middot; 10am&ndash;4pm</span></span><span class="demo-cost">$240</span></button></li>
+            <li><button type="button" class="demo-shift" aria-pressed="true" data-hrs="6" data-rate="38"><span class="demo-tick" aria-hidden="true"><svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3.2L13 5"/></svg></span><span class="demo-who"><span class="demo-name">Ava</span><span class="demo-role">Barista &middot; 11am&ndash;5pm</span></span><span class="demo-cost">$228</span></button></li>
+            <li><button type="button" class="demo-shift" aria-pressed="false" data-hrs="4" data-rate="36"><span class="demo-tick" aria-hidden="true"><svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3.2L13 5"/></svg></span><span class="demo-who"><span class="demo-name">Noah</span><span class="demo-role">Floor &middot; 11am&ndash;3pm</span></span><span class="demo-cost">$144</span></button></li>
+            <li><button type="button" class="demo-shift" aria-pressed="false" data-hrs="4" data-rate="34"><span class="demo-tick" aria-hidden="true"><svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3.2L13 5"/></svg></span><span class="demo-who"><span class="demo-name">Chloe</span><span class="demo-role">Kitchen hand &middot; 10am&ndash;2pm</span></span><span class="demo-cost">$136</span></button></li>
+          </ul>
+
+          <div class="demo-result" data-state="over">
+            <div class="demo-result-label">Wage cost of sales</div>
+            <div class="demo-pct"><span id="demo-pct">39.7</span><i>%</i></div>
+            <div class="demo-status" aria-live="polite">
+              <span class="demo-pill" id="demo-pill">Over target</span>
+              <p class="demo-msg" id="demo-msg">Over target by $408. Try trimming a shift or two.</p>
+            </div>
+            <div class="demo-bar" aria-hidden="true">
+              <span class="demo-bar-fill" id="demo-bar-fill" style="width:66%"></span>
+              <span class="demo-bar-target"></span>
+              <span class="demo-bar-tag">30% target</span>
+            </div>
+            <dl class="demo-stats">
+              <div><dt>Wages</dt><dd id="demo-wages">$1,668</dd></div>
+              <div><dt>Sales</dt><dd id="demo-sales-stat">$4,200</dd></div>
+              <div><dt>Shifts</dt><dd id="demo-shifts">6</dd></div>
+              <div><dt>Hours</dt><dd id="demo-hours">44</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="demo-foot">
+          <p>Like how that feels? CrosCheq does this with your real roster and real sales.</p>
+          <div class="demo-cta">
+            <a href="apply.html" class="btn-primary">Request access</a>
+            <span>Free 30-day trial</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="demo-note">
+        Illustrative numbers for one Saturday. In CrosCheq, pay rates come
+        from each person's award, role and the actual shift times.
+      </p>
     </section>
 
     <section id="what" class="features-section">
@@ -1123,6 +1192,110 @@
       window.addEventListener('resize', fitAll)
       window.addEventListener('load', fitAll)
       if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitAll)
+    })()
+  </script>
+
+  <script>
+    // Interactive roster demo: tap shifts / drag the sales forecast and
+    // wage cost % updates live against a 30% target.
+    ;(function () {
+      var root = document.getElementById('roster-demo')
+      if (!root) return
+
+      var TARGET = 30
+      var BAR_MAX = 60
+      var shifts = root.querySelectorAll('.demo-shift')
+      var slider = document.getElementById('demo-sales')
+      var salesOut = document.getElementById('demo-sales-out')
+      var result = root.querySelector('.demo-result')
+      var pctEl = document.getElementById('demo-pct')
+      var pillEl = document.getElementById('demo-pill')
+      var msgEl = document.getElementById('demo-msg')
+      var fillEl = document.getElementById('demo-bar-fill')
+      var wagesEl = document.getElementById('demo-wages')
+      var salesStatEl = document.getElementById('demo-sales-stat')
+      var shiftsEl = document.getElementById('demo-shifts')
+      var hoursEl = document.getElementById('demo-hours')
+      var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      var shownPct = parseFloat(pctEl.textContent)
+      var tween = null
+
+      function money(n) {
+        return '$' + Math.round(n).toLocaleString('en-AU')
+      }
+
+      function setPct(value) {
+        pctEl.textContent = value.toFixed(1)
+      }
+
+      function animatePct(to) {
+        if (tween) cancelAnimationFrame(tween)
+        if (reduceMotion) { shownPct = to; setPct(to); return }
+        var from = shownPct
+        var start = null
+        function step(ts) {
+          if (start === null) start = ts
+          var t = Math.min((ts - start) / 320, 1)
+          var eased = 1 - Math.pow(1 - t, 3)
+          shownPct = from + (to - from) * eased
+          setPct(shownPct)
+          if (t < 1) tween = requestAnimationFrame(step)
+        }
+        tween = requestAnimationFrame(step)
+      }
+
+      function render() {
+        var wages = 0, hours = 0, count = 0
+        shifts.forEach(function (b) {
+          if (b.getAttribute('aria-pressed') !== 'true') return
+          var h = +b.dataset.hrs
+          wages += h * +b.dataset.rate
+          hours += h
+          count += 1
+        })
+        var sales = +slider.value
+        var pct = wages / sales * 100
+        var budget = sales * TARGET / 100
+        var diff = Math.abs(wages - budget)
+        var state, pill, msg
+
+        if (count === 0) {
+          state = 'idle'; pill = 'Add shifts'
+          msg = 'Tap a shift to start building the roster.'
+        } else if (pct <= TARGET && count < 4) {
+          state = 'warn'; pill = 'Check cover'
+          msg = 'Wage cost is low, but check you still have enough hands on deck.'
+        } else if (pct <= TARGET) {
+          state = 'good'; pill = 'On target'
+          msg = money(diff) + ' under your ' + TARGET + '% budget. Nice roster.'
+        } else if (pct <= 35) {
+          state = 'warn'; pill = 'Close'
+          msg = money(diff) + ' over budget. One small trim gets you there.'
+        } else {
+          state = 'over'; pill = 'Over target'
+          msg = 'Over target by ' + money(diff) + '. Try trimming a shift or two.'
+        }
+
+        result.setAttribute('data-state', state)
+        pillEl.textContent = pill
+        msgEl.textContent = msg
+        wagesEl.textContent = money(wages)
+        salesStatEl.textContent = money(sales)
+        shiftsEl.textContent = count
+        hoursEl.textContent = hours
+        salesOut.textContent = money(sales)
+        fillEl.style.width = Math.min(pct / BAR_MAX, 1) * 100 + '%'
+        animatePct(pct)
+      }
+
+      shifts.forEach(function (b) {
+        b.addEventListener('click', function () {
+          b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true')
+          render()
+        })
+      })
+      slider.addEventListener('input', render)
+      render()
     })()
   </script>
 </body>
