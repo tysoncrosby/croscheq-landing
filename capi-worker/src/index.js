@@ -29,7 +29,7 @@ export default {
       return json({ error: 'invalid json' }, 400, allowedOrigin);
     }
 
-    const { event_name, event_id, event_time, event_source_url, custom_data, user_data } = body || {};
+    const { event_name, event_id, event_time, event_source_url, custom_data, user_data, test_event_code } = body || {};
     if (!event_name || !event_id || !event_source_url) {
       return json({ error: 'missing required fields' }, 400, allowedOrigin);
     }
@@ -52,7 +52,11 @@ export default {
           },
           custom_data: custom_data || {}
         }
-      ]
+      ],
+      // Only ever set when a caller explicitly passes it (e.g. manual
+      // verification against Meta's Test Events tool) - never sent by
+      // the site's own production tracking calls.
+      ...(test_event_code ? { test_event_code } : {})
     };
 
     const metaRes = await fetch(
