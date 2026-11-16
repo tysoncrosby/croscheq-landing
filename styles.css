@@ -129,6 +129,27 @@ a { color: inherit; text-decoration: none; }
 }
 .nav-cta:hover { border-color: var(--navy); transform: translateY(-1px); }
 
+.nav-trial {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 88% -20%, rgba(255, 200, 87, 0.55), transparent 55%),
+    var(--orange);
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.35);
+  white-space: nowrap;
+  transition: transform 0.15s, box-shadow 0.15s, filter 0.15s;
+}
+.nav-trial:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.04);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.45);
+}
+
 /* ── Hero ──────────────────────────────────────────────────────── */
 
 .hero {
@@ -1266,6 +1287,10 @@ select.form-input {
   .nav { padding: 18px 20px; }
   .nav-links { gap: 14px; }
   .nav-link { display: none; }
+  .nav-links { gap: 8px; }
+  .nav-trial { padding: 9px 13px; font-size: 13px; }
+  .nav-cta { padding: 9px 13px; font-size: 13px; white-space: nowrap; }
+  .nav-trial-opt { display: none; }
   .hero { padding: 56px 24px 64px; margin-bottom: 56px; }
   .dash-cards { grid-template-columns: 1fr; }
   .hero-title { font-size: 38px; }
