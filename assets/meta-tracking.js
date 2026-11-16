@@ -84,5 +84,19 @@
     }
   }
 
-  window.MetaTracking = { pageView: pageView, viewContent: viewContent, lead: lead };
+  // The free-trial signup lives on app.croscheq.com, so this site can only see
+  // the click that sends someone there, not the signup itself.
+  function trialClick() {
+    var id = uuid();
+    var data = { source_page: window.location.pathname };
+    if (window.fbq) fbq('trackCustom', 'StartTrialClick', data, { eventID: id });
+    sendCapi('StartTrialClick', id, data);
+  }
+
+  document.addEventListener('click', function (e) {
+    var el = e.target && e.target.closest ? e.target.closest('[data-trial-cta]') : null;
+    if (el) trialClick();
+  });
+
+  window.MetaTracking = { pageView: pageView, viewContent: viewContent, lead: lead, trialClick: trialClick };
 })();
