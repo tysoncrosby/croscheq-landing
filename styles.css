@@ -130,8 +130,7 @@ a { color: inherit; text-decoration: none; }
 .nav-cta:hover { border-color: var(--navy); transform: translateY(-1px); }
 
 .nav-trial {
-  display: inline-flex;
-  align-items: center;
+  display: inline-block;
   font-size: 14px;
   font-weight: 600;
   color: var(--white);
