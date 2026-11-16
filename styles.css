@@ -135,6 +135,8 @@ a { color: inherit; text-decoration: none; }
   font-weight: 600;
   color: var(--white);
   padding: 10px 20px;
+  border: 1px solid transparent;
+  margin-left: -12px;
   border-radius: 999px;
   background:
     radial-gradient(circle at 88% -20%, rgba(255, 200, 87, 0.55), transparent 55%),
@@ -1287,7 +1289,7 @@ select.form-input {
   .nav-links { gap: 14px; }
   .nav-link { display: none; }
   .nav-links { gap: 8px; }
-  .nav-trial { padding: 9px 13px; font-size: 13px; }
+  .nav-trial { padding: 9px 13px; font-size: 13px; margin-left: 0; }
   .nav-cta { padding: 9px 13px; font-size: 13px; white-space: nowrap; }
   .nav-trial-opt { display: none; }
   .hero { padding: 56px 24px 64px; margin-bottom: 56px; }
