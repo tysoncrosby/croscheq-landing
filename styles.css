@@ -1591,3 +1591,45 @@ html { scroll-padding-top: 96px; }
 .mk-bl-btns .ghost { color: var(--navy); border: 1px solid var(--line-strong); background: #fff; }
 .mk-bl-btns .primary { color: #fff; background: var(--navy); }
 .mk-bl-paper { min-height: 172px; }
+
+/* ── Staff signing page mockup (CrosCheq Sign) ─────────────────── */
+.app-window-body.mk-sp { padding: 0; background: #FAFAF7; }
+.mk-sp-bar { display: flex; align-items: center; gap: 12px; padding: 9px 14px; background: #0F1F3D; color: #fff; }
+.mk-sp-brand { display: inline-flex; align-items: center; gap: 6px; padding-right: 12px; border-right: 1px solid rgba(255, 255, 255, 0.18); font-size: 10px; }
+.mk-sp-pill { font-style: normal; font-size: 7px; font-weight: 600; letter-spacing: 0.1em; padding: 2px 7px; border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 999px; }
+.mk-sp-doc { display: flex; flex-direction: column; gap: 1px; flex: 1; min-width: 0; }
+.mk-sp-doc .e { font-size: 6.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255, 255, 255, 0.6); }
+.mk-sp-doc .t { font-size: 11px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mk-sp-start { padding: 5px 16px; font-size: 10px; font-weight: 600; color: #fff; background: #FF6B35; border-radius: 999px; }
+.mk-sp-consent { display: flex; align-items: center; gap: 8px; padding: 7px 14px; background: #fff; border-bottom: 1px solid rgba(15, 31, 61, 0.08); }
+.mk-sp-check { flex: none; width: 9px; height: 9px; border: 1px solid rgba(15, 31, 61, 0.3); border-radius: 2px; background: #fff; }
+.mk-sp-consent .c { font-size: 8px; font-weight: 500; color: #0F1F3D; flex: 1; min-width: 0; }
+.mk-sp-consent .h { font-size: 7.5px; color: #7A6350; white-space: nowrap; }
+.mk-sp-stage { position: relative; min-height: 318px; padding: 18px 20px 0; background: #ECEAE2; overflow: hidden; }
+.mk-sp-paper { width: 86%; margin: 0 auto; padding: 18px 20px 120px; background: #fff; box-shadow: 0 2px 10px rgba(15, 31, 61, 0.12); font-size: 8px; line-height: 1.5; color: #1E1E2D; }
+.mk-sp-paper .mk-sp-h { margin-bottom: 8px; font-size: 8.5px; }
+.mk-sp-paper p { margin: 0 0 7px; }
+.mk-sp-box { display: flex; align-items: center; gap: 6px; margin-top: 8px; width: 62%; padding: 7px 8px; background: rgba(47, 134, 200, 0.22); border-left: 2px solid #2F86C8; border-radius: 3px; }
+.mk-sp-box .req { color: #C0392B; font-weight: 700; }
+.mk-sp-box .l { flex: 1; font-size: 7.5px; line-height: 1.2; }
+.mk-sp-box .go { padding: 3px 8px; font-size: 7px; font-weight: 600; color: #fff; background: #2F86C8; border-radius: 999px; white-space: nowrap; }
+.mk-sp-dim { position: absolute; inset: 0; background: rgba(15, 31, 61, 0.42); }
+.mk-sp-modal { position: absolute; top: 14px; left: 50%; width: 66%; transform: translateX(-50%); padding: 14px 16px 14px; background: #fff; border-radius: 14px; box-shadow: 0 24px 50px -12px rgba(15, 31, 61, 0.5); color: #0F1F3D; }
+.mk-sp-mh { display: flex; align-items: center; justify-content: space-between; font-size: 13px; font-weight: 500; letter-spacing: -0.02em; }
+.mk-sp-mh i { display: grid; place-items: center; width: 17px; height: 17px; font-style: normal; font-size: 11px; line-height: 1; color: #7A6350; background: rgba(15, 31, 61, 0.06); border-radius: 50%; }
+.mk-sp-ms { margin: 4px 0 7px; font-size: 7px; color: rgba(15, 31, 61, 0.6); }
+.mk-sp-ml { font-size: 6px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #7A6350; margin-bottom: 3px; }
+.mk-sp-mi { padding: 4px 9px; font-size: 8px; border: 1px solid rgba(15, 31, 61, 0.14); border-radius: 999px; }
+.mk-sp-seg { display: grid; grid-template-columns: repeat(3, 1fr); margin: 7px 0; padding: 2px; background: rgba(15, 31, 61, 0.06); border-radius: 999px; text-align: center; font-size: 8px; font-weight: 500; color: #7A6350; }
+.mk-sp-seg span { padding: 3px 0; border-radius: 999px; }
+.mk-sp-seg .on { background: #0F1F3D; color: #fff; }
+.mk-sp-pad { position: relative; height: 74px; border: 1px solid rgba(15, 31, 61, 0.14); border-radius: 9px; }
+.mk-sp-pad .clr { position: absolute; top: 5px; right: 6px; padding: 2px 8px; font-size: 6.5px; border: 1px solid rgba(15, 31, 61, 0.14); border-radius: 999px; }
+.mk-sp-sig { position: absolute; left: 14px; right: 14px; top: 8px; width: 60%; height: 52px; }
+.mk-sp-pad .x { position: absolute; left: 8px; bottom: 11px; font-size: 7px; color: #7A6350; }
+.mk-sp-pad .base { position: absolute; left: 8px; right: 8px; bottom: 13px; border-bottom: 1px dashed rgba(15, 31, 61, 0.3); }
+.mk-sp-legal { margin: 6px 0 9px; font-size: 6px; line-height: 1.45; color: rgba(15, 31, 61, 0.6); }
+.mk-sp-mb { display: flex; justify-content: flex-end; gap: 6px; }
+.mk-sp-mb span { padding: 5px 13px; font-size: 8px; font-weight: 600; border-radius: 999px; }
+.mk-sp-mb .ghost { border: 1px solid rgba(15, 31, 61, 0.14); }
+.mk-sp-mb .primary { color: #fff; background: #0F1F3D; }

@@ -7,7 +7,7 @@
     mock.style.transform = ''
     mock.style.transformOrigin = ''
     wrap.style.height = ''
-    if (window.innerWidth > breakpoint) return
+    if (document.documentElement.clientWidth > breakpoint) return
     var naturalW = mock.offsetWidth
     var naturalH = mock.offsetHeight
     var scale = Math.min(1, wrap.clientWidth / naturalW)
