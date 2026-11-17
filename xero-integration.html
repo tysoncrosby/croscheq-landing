@@ -47,6 +47,8 @@
     MetaTracking.pageView();
     MetaTracking.viewContent('Xero Integration', 'integration');
   </script>
+  <link rel="stylesheet" href="assets/nav.css?v=1" />
+  <script src="assets/nav.js?v=1" defer></script>
 </head>
 <body>
   <div class="site-top">
@@ -62,7 +64,19 @@
       <span class="brand-text"><span class="wm">CROS<span class="cheq">CHEQ</span></span></span>
     </a>
     <nav class="nav-links">
-      <a href="/#integrations" class="nav-link">Integrations</a>
+      <div class="nav-dd" id="nav-dd" data-open="false">
+        <button type="button" class="nav-dd-btn" aria-expanded="false" aria-haspopup="true" aria-controls="nav-menu" aria-label="Menu"><span class="nav-dd-label">Features</span><svg class="nav-dd-chev" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg><svg class="nav-dd-burger" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        <div class="nav-menu" id="nav-menu">
+          <div class="nav-menu-label">Features</div>
+          <a class="nav-menu-item" href="rostering.html"><strong>Rostering</strong><span>Live wage cost as you build</span></a>
+          <a class="nav-menu-item" href="recipe-costing.html"><strong>Recipe costing</strong><span>Margin on every dish</span></a>
+          <div class="nav-menu-label">Integrations</div>
+          <a class="nav-menu-item" href="square-integration.html"><strong>Square</strong><span>Live sales and forecasts</span></a>
+          <a class="nav-menu-item" href="xero-integration.html"><strong>Xero</strong><span>Timesheets and bills, no re-keying</span></a>
+          <a class="nav-menu-all" href="/#what">See everything CrosCheq does →</a>
+          <div class="nav-menu-extra"><a href="/#built-for">Built for</a><a href="pricing.html">Pricing</a><a href="https://app.croscheq.com">Sign in</a></div>
+        </div>
+      </div>
       <a href="/#built-for" class="nav-link">Built for</a>
       <a href="pricing.html" class="nav-link">Pricing</a>
       <a href="https://app.croscheq.com" class="nav-cta">Sign in</a>
@@ -400,6 +414,10 @@
       <div class="footer-meta">
         <a href="https://app.croscheq.com">Sign in</a>
         <a href="pricing.html">Pricing</a>
+        <a href="rostering.html">Rostering</a>
+        <a href="recipe-costing.html">Recipe costing</a>
+        <a href="square-integration.html">Square</a>
+        <a href="xero-integration.html">Xero</a>
         <a href="support.html">Support</a>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
