@@ -138,6 +138,16 @@
     .brand-text { font-size: 21px; font-weight: 500; letter-spacing: -0.01em; }
     .wm { font-family: 'Space Grotesk', 'General Sans', sans-serif; font-weight: 700; letter-spacing: -0.02em; }
     .cheq { background: linear-gradient(120deg, var(--orange), var(--gold)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    html { scroll-padding-top: 80px; }
+    .nav { position: sticky; top: 0; z-index: 50; background: var(--off-white); box-shadow: 0 1px 0 var(--line), 0 0 0 100vmax var(--off-white); clip-path: inset(0 -100vmax -1px -100vmax); }
+    .site-top { position: sticky; top: 0; z-index: 50; background: var(--off-white); box-shadow: 0 1px 0 var(--line), 0 0 0 100vmax var(--off-white); clip-path: inset(0 -100vmax -1px -100vmax); }
+    .site-top .nav { position: static; box-shadow: none; clip-path: none; }
+    .promo-strip { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 9px 16px; background: #0F1F3D; color: #fff; font-size: 13px; line-height: 1.3; text-decoration: none; box-shadow: 0 0 0 100vmax #0F1F3D; clip-path: inset(0 -100vmax 0 -100vmax); }
+    .promo-strip:hover { text-decoration: none; }
+    .promo-pill { flex-shrink: 0; padding: 3px 10px; font-size: 10px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #0F1F3D; background: linear-gradient(120deg, #FFC857, #FFA94D); border-radius: 999px; }
+    .promo-text { font-weight: 500; }
+    .promo-go { flex-shrink: 0; font-weight: 600; color: #FFC857; transition: transform 0.15s; }
+    .promo-strip:hover .promo-go { transform: translateX(3px); }
     .nav-links { display: flex; align-items: center; gap: 24px; }
     .nav-link { font-size: 14px; color: var(--navy); opacity: 0.7; transition: opacity 0.15s; }
     .nav-link:hover { opacity: 1; text-decoration: none; }
@@ -182,6 +192,9 @@
       .nav { padding: 18px 20px; }
       .nav-links { gap: 14px; }
       .nav-link { display: none; }
+      .promo-strip { font-size: 12px; padding: 7px 12px; gap: 8px; }
+      .promo-go { display: none; }
+      .promo-pill { font-size: 9px; padding: 3px 8px; }
       .nav-links { gap: 8px; }
       .nav-trial { padding: 9px 13px; font-size: 13px; margin-left: 0; }
       .nav-cta { padding: 9px 13px; font-size: 13px; white-space: nowrap; }
@@ -212,6 +225,8 @@
   </script>
 </head>
 <body>
+  <div class="site-top">
+  <a class="promo-strip" href="pricing.html"><span class="promo-pill">Founding offer</span><span class="promo-text">50% off for life · first 20 venues</span><span class="promo-go">See pricing <span aria-hidden="true">→</span></span></a>
   <header class="nav">
     <a class="brand" href="index.html">
       <span class="brand-mark" aria-hidden="true">
@@ -230,6 +245,7 @@
       <a href="https://app.croscheq.com/get-started" class="nav-trial" data-trial-cta>Start <span class="nav-trial-opt">free </span>trial</a>
     </nav>
   </header>
+  </div>
 
   <main class="wrap">
     <div class="eyebrow">CrosCheq</div>

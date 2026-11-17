@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
   <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
   <link href="https://api.fontshare.com/v2/css?f[]=space-grotesk@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=43" />
+  <link rel="stylesheet" href="styles.css?v=51" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -66,6 +66,8 @@
   </script>
 </head>
 <body>
+  <div class="site-top">
+  <a class="promo-strip" href="pricing.html"><span class="promo-pill">Founding offer</span><span class="promo-text">50% off for life · first 20 venues</span><span class="promo-go">See pricing <span aria-hidden="true">→</span></span></a>
   <header class="nav">
     <a class="brand" href="/">
       <span class="brand-mark" aria-hidden="true">
@@ -84,152 +86,63 @@
       <a href="https://app.croscheq.com/get-started" class="nav-trial" data-trial-cta>Start <span class="nav-trial-opt">free </span>trial</a>
     </nav>
   </header>
+  </div>
 
   <main>
     <section class="hero">
       <div class="hero-content">
       <div class="hero-inner">
-        <div class="eyebrow">Hospitality operations platform</div>
-        <h1 class="hero-title"><span class="wm">CROS<span class="cheq">CHEQ</span></span> your venues from one calm screen.</h1>
+        <div class="eyebrow">For Australian hospitality venues</div>
+        <h1 class="hero-title">See your wage cost before the pay run, not after.</h1>
         <p class="hero-sub">
-          See your sales, wage cost and margins the moment they move, breeze
-          through rosters and ordering, and spend less time on bookkeeping
-          and admin. This is how a venue should run.
+          Build the roster and watch wage cost and margin update live. CrosCheq
+          also runs timesheets, ordering, recipe costing and staff onboarding
+          from one calm screen, built for owner-operators.
         </p>
         <div class="hero-actions">
           <a href="https://app.croscheq.com/get-started" class="btn-primary" data-trial-cta>Start 30-day free trial</a>
-          <a href="https://app.croscheq.com" class="btn-secondary">Open the app</a>
         </div>
         <p class="hero-note">30 days free. Card required, cancel any time.</p>
-        <div class="store-badges">
-          <a class="store-badge app-store" href="https://apps.apple.com/app/id6781569242" aria-label="Download on the App Store">
-            <img src="assets/app-store-badge.svg" alt="Download on the App Store" width="138" height="46">
-          </a>
-          <a class="store-badge google-play" href="https://play.google.com/store/apps/details?id=com.crosbyops.app" aria-label="Get it on Google Play">
-            <img src="assets/google-play-badge.png" alt="Get it on Google Play" width="155" height="60">
-          </a>
-        </div>
       </div>
 
       <div class="hero-visual" aria-hidden="true">
-        <div class="dash-win">
-          <div class="dash-body">
-            <div class="mk-nav">
-              <span class="mk-nav-brand">
-                <svg viewBox="0 0 100 100" width="15" height="15" fill="none" aria-hidden="true">
-                  <defs><linearGradient id="tick-g2" x1="26" y1="67" x2="70" y2="33" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FF6B35"/><stop offset="1" stop-color="#FFC857"/></linearGradient></defs>
-                  <path d="M26 55 L38 67 L70 33" stroke="url(#tick-g2)" stroke-width="12" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/>
-                </svg>
-                <span class="wm">CROS<span class="cheq">CHEQ</span></span>
-              </span>
-              <span class="mk-nav-tabs">
-                <span class="mk-nav-tab active">Home</span>
-                <span class="mk-nav-tab">Turnover</span>
-                <span class="mk-nav-tab">Workforce</span>
-                <span class="mk-nav-tab">Purchasing</span>
-                <span class="mk-nav-tab">Operations</span>
-              </span>
-              <span class="mk-nav-right">
-                <span class="mk-nav-loc">Harbourview</span>
-                <span class="mk-nav-ava green">AM</span>
-              </span>
-            </div>
-
-            <div class="dash-greet">
-              <div class="dash-greet-text">
-                <div class="dash-greet-date">Today · Sat 18 Jul</div>
-                <div class="dash-greet-hi">Afternoon, <span>Alex</span></div>
-                <div class="dash-greet-sub">Here's what's happening at Harbourview today.</div>
+        <div class="hero-roster" id="hero-roster">
+          <div class="hr-frame">
+            <div class="hr-top">
+              <div class="hr-top-row">
+                <span class="hr-week">Week of 6 Jul</span>
+                <span class="hr-tag" id="hr-tag">Draft</span>
               </div>
-              <div class="dash-topcards">
-                <div class="tc">
-                  <span class="tc-ico grey"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5l3 2"/></svg></span>
-                  <div><div class="tc-eyebrow">Clocked out · 4:06pm</div><div class="tc-line">8:00am – 5:30pm</div></div>
+              <div class="hr-stats">
+                <div class="hr-stat">
+                  <div class="hr-label">Wage cost</div>
+                  <div class="hr-big"><span id="hr-total">$0</span><span class="hr-plus-wrap" id="hr-plus-wrap"></span></div>
+                  <div class="hr-small">of $5,600 forecast sales</div>
                 </div>
-                <div class="tc celeb">
-                  <div class="tc-eyebrow">Coming up · Next 30 days</div>
-                  <div class="tc-celeb-row">Sam R · <span>25 Jul · turning 40</span></div>
-                  <div class="tc-celeb-row">Jess L · <span>17 Aug · turning 20</span></div>
-                </div>
-                <div class="tc">
-                  <span class="tc-ico gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M5 5l1.4 1.4M17.6 17.6 19 19M3 12h2M19 12h2M5 19l1.4-1.4M17.6 6.4 19 5"/></svg></span>
-                  <div><div class="tc-temp">14°</div><div class="tc-line">Mostly sunny</div></div>
+                <div class="hr-stat hr-stat-r">
+                  <div class="hr-label">Wage cost % <span class="hr-dot" id="hr-dot"></span></div>
+                  <div class="hr-big"><span id="hr-pct">0.0</span><span class="hr-pct">%</span></div>
+                  <div class="hr-bar"><span class="g"></span><span class="a"></span><span class="r"></span><i class="hr-marker" id="hr-marker" style="left:0%"></i></div>
+                  <div class="hr-small" id="hr-sub">Target 35%</div>
                 </div>
               </div>
             </div>
-
-            <div class="dash-kpis">
-              <div class="kpi">
-                <span class="kpi-ico gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg></span>
-                <div class="kpi-body">
-                  <div class="kpi-eyebrow">Today · Sat 18 Jul</div>
-                  <div class="kpi-value">$5,182</div>
-                  <div class="kpi-sub">102% of forecast · 333 tx</div>
-                </div>
-                <div class="kpi-prog"><span class="kpi-prog-fill good" style="width:85%"></span></div>
-              </div>
-              <div class="kpi">
-                <span class="kpi-ico sky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.5 19.5c0-3 2.7-4.8 5.5-4.8s5.5 1.8 5.5 4.8"/><path d="M16 6a3 3 0 010 6"/></svg></span>
-                <div class="kpi-body">
-                  <div class="kpi-eyebrow">Wages · Week</div>
-                  <div class="kpi-value under">31.4<span>%</span></div>
-                  <div class="kpi-sub">Under 35% target</div>
-                </div>
-                <div class="kpi-prog"><span class="kpi-prog-fill good" style="width:90%"></span></div>
-              </div>
-              <div class="kpi">
-                <span class="kpi-ico mint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7.5h12l-1 12.5H7z"/><path d="M9 7.5a3 3 0 016 0"/></svg></span>
-                <div class="kpi-body">
-                  <div class="kpi-eyebrow">COGS · Week</div>
-                  <div class="kpi-value under">31.8<span>%</span></div>
-                  <div class="kpi-sub">Inside 35% target</div>
-                </div>
-                <div class="kpi-prog"><span class="kpi-prog-fill good" style="width:91%"></span></div>
-              </div>
-              <div class="kpi">
-                <span class="kpi-ico violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16l5-5 4 3 6-7"/><path d="M15 7h4v4"/></svg></span>
-                <div class="kpi-body">
-                  <div class="kpi-eyebrow">EBITDA · Week</div>
-                  <div class="kpi-value">13.1<span>%</span></div>
-                  <div class="kpi-sub">$6,180 margin</div>
-                </div>
-                <div class="kpi-prog"><span class="kpi-prog-fill good" style="width:70%"></span></div>
-              </div>
+            <div class="hr-grid">
+              <div class="hr-row hr-head"><div class="hr-role"></div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div></div>
+            <div class="hr-row">
+              <div class="hr-role"><span class="n">Barista</span><span class="s">Full time</span></div>
+              <div class="hr-cell"><div class="hr-shift" data-s="1" data-c="255" style="--c:#FF6B35"><span class="t">6am–2pm</span><span class="c">$255</span></div></div><div class="hr-cell"><div class="hr-shift" data-s="2" data-c="255" style="--c:#FF6B35"><span class="t">6am–2pm</span><span class="c">$255</span></div></div><div class="hr-cell off"></div><div class="hr-cell"><div class="hr-shift" data-s="6" data-c="204" style="--c:#FF6B35"><span class="t">7am–1pm</span><span class="c">$204</span></div></div><div class="hr-cell off"><div class="hr-leave">Leave</div></div>
             </div>
-
-            <div class="dash-ops">
-              <div class="opc">
-                <div class="opc-head"><span class="opc-eyebrow">Payroll · Wk 19 Jul</span><span class="opc-link">Review →</span></div>
-                <div class="opc-title">0 of 1 approved</div>
-                <div class="opc-sub">Pay run · Tue 21 Jul</div>
-              </div>
-              <div class="opc">
-                <div class="opc-head"><span class="opc-eyebrow">Purchasing inbox</span><span class="opc-link">Open →</span></div>
-                <div class="opc-title">7 awaiting · $433</div>
-                <div class="opc-sub">Pick supplier · +5 more</div>
-              </div>
-              <div class="opc">
-                <div class="opc-head"><span class="opc-eyebrow">GP alerts</span><span class="opc-link">Recipes →</span></div>
-                <div class="opc-title">1 to review</div>
-                <div class="opc-sub">Haloumi toastie · 65→71%</div>
-              </div>
-              <div class="opc">
-                <div class="opc-head"><span class="opc-eyebrow">Open incidents</span><span class="opc-link">Open →</span></div>
-                <div class="opc-title"><span class="dot"></span>1 open</div>
-                <div class="opc-sub">Burnt hand · staff injury</div>
-              </div>
-              <div class="opc">
-                <div class="opc-head"><span class="opc-eyebrow">Bills · Xero</span><span class="opc-link">Publish →</span></div>
-                <div class="opc-title">$146,182</div>
-                <div class="opc-sub">335 bills · oldest 82d</div>
-              </div>
-              <div class="opc">
-                <div class="opc-head"><span class="opc-eyebrow">Who's on · Sat 18 Jul</span><span class="opc-link">Roster →</span></div>
-                <div class="opc-title">1 clocked off</div>
-                <div class="opc-sub">Front of house · 8–5:30</div>
-              </div>
+            <div class="hr-row">
+              <div class="hr-role"><span class="n">Kitchen</span><span class="s">Casual</span></div>
+              <div class="hr-cell off"></div><div class="hr-cell"><div class="hr-shift" data-s="3" data-c="216" style="--c:#E9A91F"><span class="t">7am–1pm</span><span class="c">$216</span></div></div><div class="hr-cell"><div class="hr-shift" data-s="4" data-c="216" style="--c:#E9A91F"><span class="t">7am–1pm</span><span class="c">$216</span></div></div><div class="hr-cell off"></div><div class="hr-cell"><div class="hr-shift" data-s="8" data-c="216" style="--c:#E9A91F"><span class="t">8am–2pm</span><span class="c">$216</span></div></div>
             </div>
-          </div>
+            <div class="hr-row">
+              <div class="hr-role"><span class="n">Floor</span><span class="s">Casual</span></div>
+              <div class="hr-cell off"></div><div class="hr-cell off"></div><div class="hr-cell"><div class="hr-shift" data-s="5" data-c="132" style="--c:#2A4A8A"><span class="t">10am–2pm</span><span class="c">$132</span></div></div><div class="hr-cell"><div class="hr-shift" data-s="7" data-c="132" style="--c:#2A4A8A"><span class="t">11am–3pm</span><span class="c">$132</span></div></div><div class="hr-cell"><div class="hr-shift" data-s="9" data-c="132" style="--c:#2A4A8A"><span class="t">11am–3pm</span><span class="c">$132</span></div></div>
+            </div>
+            </div>
+            <div class="hr-toast" id="hr-toast"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Roster published · 3 staff notified</div>
         </div>
       </div>
       </div>
@@ -1300,9 +1213,6 @@
         }
       }
       function fitAll() {
-        var hero = document.querySelector('.hero-visual')
-        var heroMock = hero && hero.querySelector('.dash-win')
-        if (heroMock) scaleMock(hero, heroMock, 960)
         document.querySelectorAll('.feature-mock').forEach(function (fm) {
           var aw = fm.querySelector('.app-window')
           if (aw) scaleMock(fm, aw, 760)
@@ -1312,6 +1222,112 @@
       window.addEventListener('resize', fitAll)
       window.addEventListener('load', fitAll)
       if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitAll)
+    })()
+
+    // Hero: a looping roster demo. Shifts are added one by one and wage cost
+    // counts up against the target; it then "publishes". Honours reduced motion.
+    ;(function () {
+      var root = document.getElementById('hero-roster')
+      if (!root) return
+      var visual = root.parentNode
+      var frame = root.querySelector('.hr-frame')
+      var shifts = [].slice.call(root.querySelectorAll('.hr-shift')).sort(function (a, b) { return a.dataset.s - b.dataset.s })
+      var totalEl = document.getElementById('hr-total')
+      var pctEl = document.getElementById('hr-pct')
+      var marker = document.getElementById('hr-marker')
+      var tag = document.getElementById('hr-tag')
+      var sub = document.getElementById('hr-sub')
+      var dot = document.getElementById('hr-dot')
+      var toast = document.getElementById('hr-toast')
+      var plusWrap = document.getElementById('hr-plus-wrap')
+      var REV = 5600
+      var cum = [0]
+      function recalc() {
+        cum = [0]
+        shifts.forEach(function (s) { cum.push(cum[cum.length - 1] + Number(s.dataset.c)) })
+      }
+      recalc()
+      var DESIGN_W = 540
+      var timers = [], raf = 0, running = false, cur = 0
+
+      function fit() {
+        var w = visual.clientWidth
+        var scale = Math.min(1.08, w / DESIGN_W)
+        frame.style.transformOrigin = 'top left'
+        frame.style.transform = 'scale(' + scale + ')'
+        frame.style.marginLeft = Math.max(0, (w - DESIGN_W * scale) / 2) + 'px'
+        visual.style.height = Math.ceil(frame.offsetHeight * scale) + 'px'
+      }
+      function render(total) {
+        cur = total
+        totalEl.textContent = '$' + Math.round(total).toLocaleString('en-AU')
+        var pct = total / REV * 100
+        pctEl.textContent = pct.toFixed(1)
+        marker.style.left = Math.min(100, pct / 50 * 100) + '%'
+      }
+      function tween(to, ms) {
+        var from = cur, t0 = performance.now()
+        cancelAnimationFrame(raf)
+        ;(function step(now) {
+          var k = Math.min(1, (now - t0) / ms)
+          render(from + (to - from) * (1 - Math.pow(1 - k, 3)))
+          if (k < 1) raf = requestAnimationFrame(step)
+        })(t0)
+      }
+      function plus(c) {
+        var el = document.createElement('span')
+        el.className = 'hr-plus'
+        el.textContent = '+$' + c
+        plusWrap.appendChild(el)
+        setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el) }, 1100)
+      }
+      function later(fn, ms) { timers.push(setTimeout(fn, ms)) }
+      function clearAll() { timers.forEach(clearTimeout); timers = []; cancelAnimationFrame(raf) }
+      function setDone(on) {
+        sub.textContent = on ? 'Under target' : 'Target 35%'
+        sub.className = 'hr-small' + (on ? ' hr-ok' : '')
+        dot.className = 'hr-dot' + (on ? ' on' : '')
+      }
+      function setPublished(on) {
+        tag.textContent = on ? 'Published' : 'Draft'
+        tag.className = 'hr-tag' + (on ? ' pub' : '')
+        toast.className = 'hr-toast' + (on ? ' on' : '')
+      }
+      function reset() {
+        shifts.forEach(function (s) { s.classList.remove('on') })
+        render(0); setDone(false); setPublished(false)
+        frame.classList.remove('fade')
+      }
+      function showFinal() {
+        shifts.forEach(function (s) { s.classList.add('on') })
+        render(cum[cum.length - 1]); setDone(true); setPublished(true)
+      }
+      function cycle() {
+        reset()
+        var step = 640, start = 900
+        shifts.forEach(function (s, i) {
+          later(function () { s.classList.add('on'); tween(cum[i + 1], 440); plus(s.dataset.c) }, start + i * step)
+        })
+        var end = start + shifts.length * step
+        later(function () { setDone(true) }, end + 250)
+        later(function () { setPublished(true) }, end + 1600)
+        later(function () { frame.classList.add('fade') }, end + 5000)
+        later(cycle, end + 5800)
+      }
+      function start() { if (running) return; running = true; cycle() }
+      function stop() { running = false; clearAll() }
+
+      fit()
+      window.addEventListener('resize', fit)
+      window.addEventListener('load', fit)
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit)
+
+      var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches
+      if (reduce || !('IntersectionObserver' in window)) { showFinal(); return }
+      new IntersectionObserver(function (entries) {
+        entries[0].isIntersecting && !document.hidden ? start() : stop()
+      }, { threshold: 0.25 }).observe(visual)
+      document.addEventListener('visibilitychange', function () { if (document.hidden) stop() })
     })()
   </script>
 </body>
