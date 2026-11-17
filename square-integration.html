@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Square Integration for Hospitality Venues | CrosCheq</title>
-  <meta name="description" content="Daily sales sync straight from Square, powering live wage-cost percentage and revenue forecasts on every roster. Reconcile takings by trading period in a couple of taps at close." />
+  <meta name="description" content="Square sales sync live into CrosCheq, powering wage cost percentage, revenue forecasts and end-of-day reconciliation for Australian hospitality venues." />
   <link rel="canonical" href="https://croscheq.com/square-integration.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="CrosCheq" />
@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
   <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
   <link href="https://api.fontshare.com/v2/css?f[]=space-grotesk@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=51" />
+  <link rel="stylesheet" href="styles.css?v=57" />
 
   <!-- Meta Pixel -->
   <script>
@@ -84,7 +84,6 @@
         </p>
         <div class="hero-actions">
           <a href="https://app.croscheq.com/get-started" class="btn-primary" data-trial-cta>Start 30-day free trial</a>
-          <a href="https://app.croscheq.com" class="btn-secondary">Open the app</a>
         </div>
         <p class="hero-note">30 days free. Card required, cancel any time.</p>
       </div>
@@ -212,6 +211,178 @@
             </div>
           </div>
         </article>
+
+        <article class="feature-row reverse">
+          <div class="feature-copy">
+            <div class="module-icon sky" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="17" rx="2" />
+                <path d="M8 2v2M16 2v2M5 9h14" />
+                <rect x="6" y="12" width="7" height="2.2" rx="1" fill="currentColor" stroke="none" />
+                <rect x="10" y="16" width="8" height="2.2" rx="1" fill="currentColor" stroke="none" />
+              </svg>
+            </div>
+            <h3 class="module-title">Forecast revenue on every roster</h3>
+            <p class="module-body">
+              Daily sales from Square power the revenue forecast on every roster. Drag shifts in and the wage cost percentage updates against what the venue is forecast to take.
+            </p>
+          </div>
+          <div class="feature-mock">
+            
+            <div class="app-window">
+              <div class="app-window-body" data-mock="rostering">
+                <div class="mk-nav">
+                  <span class="mk-nav-brand">
+                    <svg viewBox="0 0 100 100" width="15" height="15" fill="none" aria-hidden="true">
+                      <defs><linearGradient id="tick-gr3" x1="26" y1="67" x2="70" y2="33" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FF6B35"/><stop offset="1" stop-color="#FFC857"/></linearGradient></defs>
+                      <path d="M26 55 L38 67 L70 33" stroke="url(#tick-gr3)" stroke-width="12" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/>
+                    </svg>
+                    <span class="wm">CROS<span class="cheq">CHEQ</span></span>
+                  </span>
+                  <span class="mk-nav-tabs">
+                    <span class="mk-nav-tab">Home</span>
+                    <span class="mk-nav-tab">Turnover</span>
+                    <span class="mk-nav-tab active">Workforce</span>
+                    <span class="mk-nav-tab">Purchasing</span>
+                    <span class="mk-nav-tab">Operations</span>
+                  </span>
+                  <span class="mk-nav-right">
+                    <span class="mk-nav-loc">Harbourview</span>
+                    <span class="mk-nav-ava green">AM</span>
+                  </span>
+                </div>
+
+                <div class="mk-head">
+                  <div class="mk-crumb">Workforce / Rosters <span class="mk-tag">DRAFT</span></div>
+                  <h4 class="mk-title">Roster <span class="muted">· 6–12 Jul 2026</span></h4>
+                </div>
+
+                <div class="mk-banner">
+                  <div class="mk-banner-grid">
+                    <div class="mk-metric">
+                      <div class="mk-metric-label">Total wage cost</div>
+                      <div class="mk-metric-value">$11,540</div>
+                      <div class="mk-metric-sub"><strong>280</strong> of 257 hrs</div>
+                    </div>
+                    <div class="mk-metric">
+                      <div class="mk-metric-label">Gross revenue</div>
+                      <div class="mk-metric-value">$33,260</div>
+                      <div class="mk-metric-sub">Forecast from Turnover</div>
+                    </div>
+                    <div class="mk-metric">
+                      <div class="mk-metric-label">Wage cost % <span class="mk-metric-dot bad"></span></div>
+                      <div class="mk-metric-value">38.2<span class="pct">%</span></div>
+                      <div class="mk-bar-wrap">
+                        <div class="mk-bar">
+                          <span class="mk-bar-zone green" style="width:52%"></span>
+                          <span class="mk-bar-zone amber" style="width:24%"></span>
+                          <span class="mk-bar-zone red" style="width:24%"></span>
+                        </div>
+                        <span class="mk-bar-marker" style="left:79%"></span>
+                      </div>
+                    </div>
+                    <div class="mk-metric">
+                      <div class="mk-metric-label">Sales / labour hr</div>
+                      <div class="mk-metric-value">$108</div>
+                      <div class="mk-metric-sub">Target <strong>$118/h</strong></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mk-card">
+                  <div class="mk-rg-head">
+                    <div class="mk-rg-hcell"><span class="mk-rg-dayname">Staff</span></div>
+                    <div class="mk-rg-hcell"><span class="mk-rg-dayname">Mon 6</span><span class="mk-rg-daycost over">41.9%</span></div>
+                    <div class="mk-rg-hcell"><span class="mk-rg-dayname">Tue 7</span><span class="mk-rg-daycost safe">33.2%</span></div>
+                    <div class="mk-rg-hcell"><span class="mk-rg-dayname">Wed 8</span><span class="mk-rg-daycost warn">38.0%</span></div>
+                    <div class="mk-rg-hcell"><span class="mk-rg-dayname">Thu 9</span><span class="mk-rg-daycost safe">30.0%</span></div>
+                    <div class="mk-rg-hcell"><span class="mk-rg-dayname">Fri 10</span><span class="mk-rg-daycost safe">28.3%</span></div>
+                  </div>
+
+                  <div class="mk-rg-section">Front of House</div>
+
+                  <div class="mk-rg-row">
+                    <div class="mk-rg-staff"><span class="mk-rg-staff-name">Olivia P.</span><span class="mk-rg-staff-sub">Full time · 38h</span></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#FF6B35"><span class="t">7am–3pm</span><span class="b">30 min break</span><span class="c">$298</span></div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#FF6B35"><span class="t">7am–3pm</span><span class="b">30 min break</span><span class="c">$298</span></div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-off">Day off</div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#FF6B35"><span class="t">9am–5pm</span><span class="b">30 min break</span><span class="c">$176</span></div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-leave"><span class="lt">Annual leave</span><span class="lm">All day</span></div></div>
+                  </div>
+
+                  <div class="mk-rg-row">
+                    <div class="mk-rg-staff"><span class="mk-rg-staff-name">Noah K.</span><span class="mk-rg-staff-sub">Casual · 24h</span></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-off">Day off</div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#FFC857"><span class="t">3pm–11pm</span><span class="b">30 min break</span><span class="c">$124</span></div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#FFC857"><span class="t">3pm–11pm</span><span class="b">30 min break</span><span class="c">$176</span></div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-off">Day off</div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#FFC857"><span class="t">3pm–11pm</span><span class="b">30 min break</span><span class="c">$201</span></div></div>
+                  </div>
+
+                  <div class="mk-rg-row">
+                    <div class="mk-rg-staff"><span class="mk-rg-staff-name">Sam T.</span><span class="mk-rg-staff-sub">Casual · 18h</span></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-off">Day off</div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-off">Day off</div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#1A2D52"><span class="t">5pm–9pm</span><span class="c">$118</span></div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#1A2D52"><span class="t">5pm–9pm</span><span class="c">$118</span></div></div>
+                    <div class="mk-rg-cell"><div class="mk-rg-shift" style="--sh:#1A2D52"><span class="t">5pm–9pm</span><span class="c">$118</span></div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="more more-inline">
+      <div class="section-inner">
+        <div class="section-head">
+          <div class="eyebrow">Beyond the roster</div>
+          <h2 class="section-title">Square sales, put to work across the venue.</h2>
+        </div>
+        <div class="more-grid">
+        <article class="more-card">
+          <div class="more-ico mint" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="4" y1="20" x2="4" y2="14" /><line x1="10" y1="20" x2="10" y2="10" /><line x1="16" y1="20" x2="16" y2="6" /><line x1="22" y1="20" x2="22" y2="13" />
+            </svg>
+          </div>
+          <h3 class="more-title">Turnover &amp; end of day</h3>
+          <p class="more-body">Stop reconciling till counts against a spreadsheet at close. Takings sync from Square, with forecasts by trading period, then reconcile cash and payments in a couple of taps.</p>
+        </article>
+        <article class="more-card">
+          <div class="more-ico sky" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="2" width="8" height="4" rx="1" /><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /><path d="M9 13l2 2 4-4" />
+            </svg>
+          </div>
+          <h3 class="more-title">Smarter ordering</h3>
+          <p class="more-body">Stop rebuilding the same order every week. Save order templates like a coffee order or a gelato order, watch your weekly budget as you order, and get suggested quantities from what actually sold in Square.</p>
+        </article>
+        <article class="more-card">
+          <div class="more-ico gold" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" />
+            </svg>
+          </div>
+          <h3 class="more-title">Menu performance</h3>
+          <p class="more-body">Stop guessing which dishes earn their place on the menu. Link each recipe to the Square item it sells as, check your price against cost, and see how every dish performs.</p>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="who">
+      <div class="section-head">
+        <div class="eyebrow">Who it's for</div>
+        <h2 class="section-title">Made for the way venues actually run.</h2>
+      </div>
+      <div class="who-grid">
+        <article class="who-card"><h3>Cafes and restaurants</h3><p>Takings sync from Square, so wage cost is measured against real revenue.</p></article>
+        <article class="who-card"><h3>Bars, pubs and venues</h3><p>Reconcile cash and payments by trading period in a couple of taps at close.</p></article>
+        <article class="who-card"><h3>Multi-venue operators</h3><p>Switch stores, compare locations and roll up the group in one screen.</p></article>
       </div>
     </section>
 
@@ -259,6 +430,18 @@
       </div>
     </section>
 
+    <section class="related">
+      <div class="section-head">
+        <div class="eyebrow">Keep exploring</div>
+        <h2 class="section-title">It all works together.</h2>
+      </div>
+      <div class="related-grid">
+        <a class="related-card" href="rostering.html"><h3>Rostering</h3><p>Wage cost live as you build the roster.</p><span class="related-go">Read more →</span></a>
+        <a class="related-card" href="recipe-costing.html"><h3>Recipe costing</h3><p>Cost every dish from live supplier prices.</p><span class="related-go">Read more →</span></a>
+        <a class="related-card" href="xero-integration.html"><h3>Xero integration</h3><p>Timesheets to payroll, invoices to bills.</p><span class="related-go">Read more →</span></a>
+      </div>
+    </section>
+
     <section id="contact" class="contact">
       <div class="contact-inner">
         <div class="eyebrow">Get started</div>
@@ -268,6 +451,7 @@
         </p>
         <a href="https://app.croscheq.com/get-started" class="btn-primary" data-trial-cta>Start 30-day free trial</a>
         <p class="contact-note">30 days free. Card required, cancel any time.</p>
+        <p class="contact-price">From <strong>$149.50 a month</strong> for our first 20 founding venues, then $299. <a href="pricing.html">See pricing →</a></p>
         <div class="store-badges">
           <a class="store-badge app-store" href="https://apps.apple.com/app/id6781569242" aria-label="Download on the App Store">
             <img src="assets/app-store-badge.svg" alt="Download on the App Store" width="138" height="46">
@@ -303,5 +487,6 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear()
   </script>
+  <script src="assets/mock-fit.js"></script>
 </body>
 </html>

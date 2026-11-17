@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Xero Integration for Hospitality Venues | CrosCheq</title>
-  <meta name="description" content="Push approved timesheets to Xero payroll and post supplier invoices as bills, synced back with bill numbers, no double entry. Import staff from Xero and assign award rates as you go." />
+  <meta name="description" content="Push approved timesheets to Xero payroll and post supplier invoices as bills with no double entry. Built for Australian hospitality venues." />
   <link rel="canonical" href="https://croscheq.com/xero-integration.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="CrosCheq" />
@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
   <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
   <link href="https://api.fontshare.com/v2/css?f[]=space-grotesk@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=51" />
+  <link rel="stylesheet" href="styles.css?v=57" />
 
   <!-- Meta Pixel -->
   <script>
@@ -84,7 +84,6 @@
         </p>
         <div class="hero-actions">
           <a href="https://app.croscheq.com/get-started" class="btn-primary" data-trial-cta>Start 30-day free trial</a>
-          <a href="https://app.croscheq.com" class="btn-secondary">Open the app</a>
         </div>
         <p class="hero-note">30 days free. Card required, cancel any time.</p>
       </div>
@@ -108,21 +107,15 @@
             </div>
             <h3 class="module-title">No double entry, either direction</h3>
             <p class="module-body">
-              Approved timesheets push straight to Xero payroll. Supplier
-              invoices post as bills and sync back with their bill numbers,
-              so nothing gets re-keyed and nothing goes missing between
-              the two systems.
+              Forward a supplier invoice by email or upload a photo or PDF. AI reads it, picks out each product and maps it to the right accounts, then posts it to Xero as a bill and syncs the bill number back. Nothing gets re-keyed and nothing goes missing between the two systems.
             </p>
           </div>
           <div class="feature-mock">
             <div class="app-window">
-              <div class="app-window-body" data-mock="xero">
+              <div class="app-window-body" data-mock="bills">
                 <div class="mk-nav">
                   <span class="mk-nav-brand">
-                    <svg viewBox="0 0 100 100" width="15" height="15" fill="none" aria-hidden="true">
-                      <defs><linearGradient id="tick-xe2" x1="26" y1="67" x2="70" y2="33" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FF6B35"/><stop offset="1" stop-color="#FFC857"/></linearGradient></defs>
-                      <path d="M26 55 L38 67 L70 33" stroke="url(#tick-xe2)" stroke-width="12" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/>
-                    </svg>
+                    <svg viewBox="0 0 100 100" width="15" height="15" fill="none" aria-hidden="true"><defs><linearGradient id="tick-gbl" x1="26" y1="67" x2="70" y2="33" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FF6B35"/><stop offset="1" stop-color="#FFC857"/></linearGradient></defs><path d="M26 55 L38 67 L70 33" stroke="url(#tick-gbl)" stroke-width="12" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/></svg>
                     <span class="wm">CROS<span class="cheq">CHEQ</span></span>
                   </span>
                   <span class="mk-nav-tabs">
@@ -138,20 +131,177 @@
                   </span>
                 </div>
 
-                <div class="mk-head">
-                  <div class="mk-crumb">Purchasing / Bills</div>
-                  <h4 class="mk-title">Bills <span class="muted">· Xero</span></h4>
+                <div class="mk-bl-head">
+                  <div>
+                    <div class="mk-crumb">Purchasing / Bills</div>
+                    <h4 class="mk-title">Bills</h4>
+                  </div>
+                  <div class="mk-bl-tabs"><span class="mk-bl-seg on">Awaiting <i>9</i></span><span class="mk-bl-seg">Published</span><span class="mk-bl-inbox">Inbox</span></div>
                 </div>
 
-                <div class="mk-rc-tiles">
-                  <div class="mk-rc-tile"><div class="mk-rc-label">Outstanding</div><div class="mk-rc-value">$146,182</div><div class="mk-rc-sub">335 bills</div></div>
-                  <div class="mk-rc-tile"><div class="mk-rc-label">Oldest</div><div class="mk-rc-value">82d</div><div class="mk-rc-sub">Ready to publish</div></div>
-                  <div class="mk-rc-tile"><div class="mk-rc-label">Double entry</div><div class="mk-rc-value good">None</div><div class="mk-rc-sub">Synced with bill numbers</div></div>
+                <div class="mk-bl-card">
+                  <div class="mk-bl-list">
+                    <div class="mk-bl-search">Search supplier or invoice no…</div>
+                    <div class="mk-bl-row on"><span class="mk-bl-sel"></span><div class="mk-bl-nm"><div class="n">Sunshine Coffee Roasters</div><div class="s">18 Nov 2026 · $1,284.50</div></div><span class="mk-bl-chip">Action</span></div>
+                    <div class="mk-bl-row"><span class="mk-bl-sel"></span><div class="mk-bl-nm"><div class="n">Sunshine Coffee Roasters</div><div class="s">18 Nov 2026 · $412.80</div></div><span class="mk-bl-chip">Action</span></div>
+                    <div class="mk-bl-row"><span class="mk-bl-sel"></span><div class="mk-bl-nm"><div class="n">Riverbend Bakery</div><div class="s">17 Nov 2026 · $186.40</div></div><span class="mk-bl-chip">Action</span></div>
+                    <div class="mk-bl-row"><span class="mk-bl-sel"></span><div class="mk-bl-nm"><div class="n">Local Dairy Co</div><div class="s">16 Nov 2026 · $324.15</div></div><span class="mk-bl-chip">Action</span></div>
+                    <div class="mk-bl-row"><span class="mk-bl-sel"></span><div class="mk-bl-nm"><div class="n">Harbour Produce</div><div class="s">16 Nov 2026 · $268.90</div></div><span class="mk-bl-chip">Action</span></div>
+                    <div class="mk-bl-row"><span class="mk-bl-sel"></span><div class="mk-bl-nm"><div class="n">Coastal Seafood</div><div class="s">15 Nov 2026 · $742.00</div></div><span class="mk-bl-chip">Action</span></div>
+                  </div>
+                  <div class="mk-bl-prev">
+                    <div class="mk-bl-lbl">Invoice preview</div>
+                    <div class="mk-bl-paper">
+                      <div class="pt">Tax Invoice</div>
+                      <div class="pn">SCR-40718</div>
+                      <div class="mk-bl-boxes"><span></span><span></span></div>
+                      <div class="mk-bl-th"><span>Item</span><span>Qty</span><span>Price</span></div>
+                      <div class="mk-bl-bar" style="width:88%"></div><div class="mk-bl-bar" style="width:72%"></div><div class="mk-bl-bar" style="width:80%"></div><div class="mk-bl-bar" style="width:64%"></div><div class="mk-bl-bar" style="width:76%"></div><div class="mk-bl-bar" style="width:58%"></div><div class="mk-bl-bar" style="width:70%"></div><div class="mk-bl-bar" style="width:52%"></div>
+                    </div>
+                  </div>
+                  <div class="mk-bl-form">
+                    <div class="mk-bl-two">
+                      <div class="f"><label>Invoice number</label><div class="fi">SCR-40718</div></div>
+                      <div class="f"><label>Date</label><div class="fi">18 Nov 2026</div></div>
+                    </div>
+                    <div class="f"><label>Supplier</label><div class="fi">Sunshine Coffee Roasters</div></div>
+                    <div class="mk-bl-three">
+                      <div class="f"><label>Subtotal</label><div class="fi">$1,167.73</div></div>
+                      <div class="f"><label>GST</label><div class="fi">$116.77</div></div>
+                      <div class="f"><label>Total</label><div class="fi b">$1,284.50</div></div>
+                    </div>
+                    <div class="mk-bl-pay"><label>Payment</label><span class="mk-bl-toggle"><span class="on">Unpaid</span><span>Paid</span></span></div>
+                    <div class="mk-bl-two">
+                      <div class="f"><label>Due date</label><div class="fi">25 Nov 2026</div></div>
+                      <div class="f"><label>Publish as</label><div class="fi">Purchase (AP Bill)</div></div>
+                    </div>
+                    <div class="f"><label>Xero contact</label><div class="fi">Sunshine Coffee Roasters</div></div>
+                    <div class="mk-bl-btns"><span class="ghost">Open invoice</span><span class="primary">Publish to Xero</span></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </article>
+
+        <article class="feature-row reverse">
+          <div class="feature-copy">
+            <div class="module-icon gold" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3 2" />
+              </svg>
+            </div>
+            <h3 class="module-title">Timesheets to payroll, approved once</h3>
+            <p class="module-body">
+              Staff clock in via the iPad time clock and you approve weekly. Approved timesheets push straight to Xero payroll with award allowances already applied.
+            </p>
+          </div>
+          <div class="feature-mock">
+            <div class="app-window">
+              <div class="app-window-body" data-mock="timesheets">
+                <div class="mk-nav">
+                  <span class="mk-nav-brand">
+                    <svg viewBox="0 0 100 100" width="15" height="15" fill="none" aria-hidden="true">
+                      <defs><linearGradient id="tick-gt4" x1="26" y1="67" x2="70" y2="33" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FF6B35"/><stop offset="1" stop-color="#FFC857"/></linearGradient></defs>
+                      <path d="M26 55 L38 67 L70 33" stroke="url(#tick-gt4)" stroke-width="12" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/>
+                    </svg>
+                    <span class="wm">CROS<span class="cheq">CHEQ</span></span>
+                  </span>
+                  <span class="mk-nav-tabs">
+                    <span class="mk-nav-tab">Home</span>
+                    <span class="mk-nav-tab">Turnover</span>
+                    <span class="mk-nav-tab active">Workforce</span>
+                    <span class="mk-nav-tab">Purchasing</span>
+                    <span class="mk-nav-tab">Operations</span>
+                  </span>
+                  <span class="mk-nav-right">
+                    <span class="mk-nav-loc">Harbourview</span>
+                    <span class="mk-nav-ava green">AM</span>
+                  </span>
+                </div>
+
+                <div class="mk-head">
+                  <div class="mk-crumb">Workforce / Timesheets</div>
+                  <h4 class="mk-title">Timesheets <span class="muted">· 6–12 Jul 2026</span></h4>
+                </div>
+
+                <div class="mk-ts-top">
+                  <div class="mk-banner">
+                    <div class="mk-banner-grid">
+                      <div class="mk-metric">
+                        <div class="mk-metric-label">Total hours</div>
+                        <div class="mk-metric-value">280<span class="pct"> hrs</span></div>
+                        <div class="mk-metric-sub">45 shifts this week</div>
+                      </div>
+                      <div class="mk-metric">
+                        <div class="mk-metric-label">Wages cost</div>
+                        <div class="mk-metric-value">$11,540</div>
+                        <div class="mk-metric-sub">Incl. super &amp; workcover</div>
+                      </div>
+                      <div class="mk-metric">
+                        <div class="mk-metric-label">Approved <span class="mk-metric-dot warn"></span></div>
+                        <div class="mk-metric-value">5<span class="pct"> / 45</span></div>
+                        <div class="mk-metric-sub">40 pending review</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mk-notes-card">
+                    <span class="mk-notes-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6" /><path d="M9 15h6M9 11h3" />
+                      </svg>
+                    </span>
+                    <span class="mk-notes-body">
+                      <span class="mk-notes-label">Notes for payroll</span>
+                      <span class="mk-notes-title">All actioned</span>
+                      <span class="mk-notes-link">View · action →</span>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="mk-tabs">
+                  <span class="mk-tab active">All<span class="n">45</span></span>
+                  <span class="mk-tab">Needs review<span class="n">40</span></span>
+                  <span class="mk-tab">Approved<span class="n">5</span></span>
+                </div>
+
+                <div class="mk-ts">
+                  <div class="mk-ts-row">
+                    <span class="mk-ava">SM</span>
+                    <span class="mk-ts-info"><span class="mk-ts-name">Sophie M.</span><div class="mk-ts-meta">Casual · 1 shift · 4.50 hrs</div></span>
+                    <span class="mk-pill-pending">Pending</span>
+                    <span class="mk-btn-navy">Approve all</span>
+                  </div>
+                  <div class="mk-ts-row">
+                    <span class="mk-ava">DR</span>
+                    <span class="mk-ts-info"><span class="mk-ts-name">Daniel R.</span><div class="mk-ts-meta">Casual · 6 shifts · 34.25 hrs</div></span>
+                    <span class="mk-pill-pending">Pending</span>
+                    <span class="mk-btn-navy">Approve all</span>
+                  </div>
+                  <div class="mk-ts-row">
+                    <span class="mk-ava green">GW</span>
+                    <span class="mk-ts-info"><span class="mk-ts-name">Grace W.</span><div class="mk-ts-meta">Full time · 5 shifts · 38.00 hrs</div></span>
+                    <span class="mk-pill-approved">Approved</span>
+                    <span class="mk-btn-navy">View</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="who">
+      <div class="section-head">
+        <div class="eyebrow">Who it's for</div>
+        <h2 class="section-title">Made for the way venues actually run.</h2>
+      </div>
+      <div class="who-grid">
+        <article class="who-card"><h3>Cafes and restaurants</h3><p>Approve timesheets once and push them through to Xero payroll.</p></article>
+        <article class="who-card"><h3>Bars, pubs and venues</h3><p>Post supplier invoices as bills with accounts mapped in batch.</p></article>
+        <article class="who-card"><h3>Multi-venue operators</h3><p>Switch stores, compare locations and roll up the group in one screen.</p></article>
       </div>
     </section>
 
@@ -181,6 +331,10 @@
         </div>
         <div class="faq-list">
           <details class="faq-item">
+            <summary>How do invoices get into CrosCheq?</summary>
+            <p>Forward them by email or upload a photo or PDF. AI reads each invoice and picks out the products, so it is ready to publish to Xero as a bill with the right accounts mapped.</p>
+          </details>
+          <details class="faq-item">
             <summary>What flows from CrosCheq into Xero?</summary>
             <p>Approved timesheets push through to Xero payroll, and supplier invoices post as bills, synced back with their bill numbers.</p>
           </details>
@@ -200,6 +354,18 @@
       </div>
     </section>
 
+    <section class="related">
+      <div class="section-head">
+        <div class="eyebrow">Keep exploring</div>
+        <h2 class="section-title">It all works together.</h2>
+      </div>
+      <div class="related-grid">
+        <a class="related-card" href="rostering.html"><h3>Rostering</h3><p>Wage cost live as you build the roster.</p><span class="related-go">Read more →</span></a>
+        <a class="related-card" href="recipe-costing.html"><h3>Recipe costing</h3><p>Cost every dish from live supplier prices.</p><span class="related-go">Read more →</span></a>
+        <a class="related-card" href="square-integration.html"><h3>Square integration</h3><p>Daily sales powering wage cost and forecasts.</p><span class="related-go">Read more →</span></a>
+      </div>
+    </section>
+
     <section id="contact" class="contact">
       <div class="contact-inner">
         <div class="eyebrow">Get started</div>
@@ -209,6 +375,7 @@
         </p>
         <a href="https://app.croscheq.com/get-started" class="btn-primary" data-trial-cta>Start 30-day free trial</a>
         <p class="contact-note">30 days free. Card required, cancel any time.</p>
+        <p class="contact-price">From <strong>$149.50 a month</strong> for our first 20 founding venues, then $299. <a href="pricing.html">See pricing →</a></p>
         <div class="store-badges">
           <a class="store-badge app-store" href="https://apps.apple.com/app/id6781569242" aria-label="Download on the App Store">
             <img src="assets/app-store-badge.svg" alt="Download on the App Store" width="138" height="46">
@@ -244,5 +411,6 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear()
   </script>
+  <script src="assets/mock-fit.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Recipe Costing Software for Hospitality | CrosCheq</title>
-  <meta name="description" content="Cost every dish from live supplier prices. Set a target gross profit and see cost per serve, sell price and margin update the moment an ingredient price moves, with an alert when a recipe drops under target." />
+  <meta name="description" content="Cost every dish from live supplier prices and see margin update the moment an ingredient price moves, with an alert when a recipe drops under target." />
   <link rel="canonical" href="https://croscheq.com/recipe-costing.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="CrosCheq" />
@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
   <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
   <link href="https://api.fontshare.com/v2/css?f[]=space-grotesk@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=51" />
+  <link rel="stylesheet" href="styles.css?v=57" />
 
   <!-- Meta Pixel -->
   <script>
@@ -84,7 +84,6 @@
         </p>
         <div class="hero-actions">
           <a href="https://app.croscheq.com/get-started" class="btn-primary" data-trial-cta>Start 30-day free trial</a>
-          <a href="https://app.croscheq.com" class="btn-secondary">Open the app</a>
         </div>
         <p class="hero-note">30 days free. Card required, cancel any time.</p>
       </div>
@@ -162,6 +161,144 @@
             </div>
           </div>
         </article>
+
+        <article class="feature-row reverse">
+          <div class="feature-copy">
+            <div class="module-icon mint" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1" />
+                <circle cx="20" cy="21" r="1" />
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+              </svg>
+            </div>
+            <h3 class="module-title">Prices flow in from your invoices</h3>
+            <p class="module-body">
+              Forward a supplier invoice by email or upload a photo or PDF. AI reads it and records each product&rsquo;s price against your product list, so recipe costs move the moment a supplier price does. The same invoice posts to Xero as a bill.
+            </p>
+          </div>
+          <div class="feature-mock">
+            <div class="app-window">
+              <div class="app-window-body" data-mock="bills">
+                <div class="mk-nav">
+                  <span class="mk-nav-brand">
+                    <svg viewBox="0 0 100 100" width="15" height="15" fill="none" aria-hidden="true"><defs><linearGradient id="tick-gblr" x1="26" y1="67" x2="70" y2="33" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FF6B35"/><stop offset="1" stop-color="#FFC857"/></linearGradient></defs><path d="M26 55 L38 67 L70 33" stroke="url(#tick-gblr)" stroke-width="12" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/></svg>
+                    <span class="wm">CROS<span class="cheq">CHEQ</span></span>
+                  </span>
+                  <span class="mk-nav-tabs">
+                    <span class="mk-nav-tab">Home</span>
+                    <span class="mk-nav-tab">Turnover</span>
+                    <span class="mk-nav-tab">Workforce</span>
+                    <span class="mk-nav-tab active">Purchasing</span>
+                    <span class="mk-nav-tab">Operations</span>
+                  </span>
+                  <span class="mk-nav-right">
+                    <span class="mk-nav-loc">Harbourview</span>
+                    <span class="mk-nav-ava green">AM</span>
+                  </span>
+                </div>
+
+                <div class="mk-bl-head">
+                  <div>
+                    <div class="mk-crumb">Purchasing / Bills</div>
+                    <h4 class="mk-title">Bills</h4>
+                  </div>
+                  <div class="mk-bl-tabs"><span class="mk-bl-seg on">Awaiting <i>9</i></span><span class="mk-bl-seg">Published</span><span class="mk-bl-inbox">Inbox</span></div>
+                </div>
+
+                <div class="mk-bl-card">
+                  <div class="mk-bl-list">
+                    <div class="mk-bl-search">Search supplier or invoice no…</div>
+                    <div class="mk-bl-row on"><span class="mk-bl-sel"></span><div class="mk-bl-nm"><div class="n">Sunshine Coffee Roasters</div><div class="s">18 Nov 2026 · $1,284.50</div></div><span class="mk-bl-chip">Action</span></div>
+                    <div class="mk-bl-row"><span class="mk-bl-sel"></span><div class="mk-bl-nm"><div class="n">Sunshine Coffee Roasters</div><div class="s">18 Nov 2026 · $412.80</div></div><span class="mk-bl-chip">Action</span></div>
+                    <div class="mk-bl-row"><span class="mk-bl-sel"></span><div class="mk-bl-nm"><div class="n">Riverbend Bakery</div><div class="s">17 Nov 2026 · $186.40</div></div><span class="mk-bl-chip">Action</span></div>
+                    <div class="mk-bl-row"><span class="mk-bl-sel"></span><div class="mk-bl-nm"><div class="n">Local Dairy Co</div><div class="s">16 Nov 2026 · $324.15</div></div><span class="mk-bl-chip">Action</span></div>
+                    <div class="mk-bl-row"><span class="mk-bl-sel"></span><div class="mk-bl-nm"><div class="n">Harbour Produce</div><div class="s">16 Nov 2026 · $268.90</div></div><span class="mk-bl-chip">Action</span></div>
+                    <div class="mk-bl-row"><span class="mk-bl-sel"></span><div class="mk-bl-nm"><div class="n">Coastal Seafood</div><div class="s">15 Nov 2026 · $742.00</div></div><span class="mk-bl-chip">Action</span></div>
+                  </div>
+                  <div class="mk-bl-prev">
+                    <div class="mk-bl-lbl">Invoice preview</div>
+                    <div class="mk-bl-paper">
+                      <div class="pt">Tax Invoice</div>
+                      <div class="pn">SCR-40718</div>
+                      <div class="mk-bl-boxes"><span></span><span></span></div>
+                      <div class="mk-bl-th"><span>Item</span><span>Qty</span><span>Price</span></div>
+                      <div class="mk-bl-bar" style="width:88%"></div><div class="mk-bl-bar" style="width:72%"></div><div class="mk-bl-bar" style="width:80%"></div><div class="mk-bl-bar" style="width:64%"></div><div class="mk-bl-bar" style="width:76%"></div><div class="mk-bl-bar" style="width:58%"></div><div class="mk-bl-bar" style="width:70%"></div><div class="mk-bl-bar" style="width:52%"></div>
+                    </div>
+                  </div>
+                  <div class="mk-bl-form">
+                    <div class="mk-bl-two">
+                      <div class="f"><label>Invoice number</label><div class="fi">SCR-40718</div></div>
+                      <div class="f"><label>Date</label><div class="fi">18 Nov 2026</div></div>
+                    </div>
+                    <div class="f"><label>Supplier</label><div class="fi">Sunshine Coffee Roasters</div></div>
+                    <div class="mk-bl-three">
+                      <div class="f"><label>Subtotal</label><div class="fi">$1,167.73</div></div>
+                      <div class="f"><label>GST</label><div class="fi">$116.77</div></div>
+                      <div class="f"><label>Total</label><div class="fi b">$1,284.50</div></div>
+                    </div>
+                    <div class="mk-bl-pay"><label>Payment</label><span class="mk-bl-toggle"><span class="on">Unpaid</span><span>Paid</span></span></div>
+                    <div class="mk-bl-two">
+                      <div class="f"><label>Due date</label><div class="fi">25 Nov 2026</div></div>
+                      <div class="f"><label>Publish as</label><div class="fi">Purchase (AP Bill)</div></div>
+                    </div>
+                    <div class="f"><label>Xero contact</label><div class="fi">Sunshine Coffee Roasters</div></div>
+                    <div class="mk-bl-btns"><span class="ghost">Open invoice</span><span class="primary">Publish to Xero</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="more more-inline">
+      <div class="section-inner">
+        <div class="section-head">
+          <div class="eyebrow">Around the dish</div>
+          <h2 class="section-title">Costing, ordering and menu performance, together.</h2>
+        </div>
+        <div class="more-grid">
+        <article class="more-card">
+          <div class="more-ico sky" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="2" width="8" height="4" rx="1" /><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /><path d="M9 13l2 2 4-4" />
+            </svg>
+          </div>
+          <h3 class="more-title">Smarter ordering</h3>
+          <p class="more-body">Stop rebuilding the same order every week. Save order templates like a coffee order or a gelato order, watch your weekly budget as you order, and get suggested quantities from what actually sold in Square.</p>
+        </article>
+        <article class="more-card">
+          <div class="more-ico gold" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" />
+            </svg>
+          </div>
+          <h3 class="more-title">Menu performance</h3>
+          <p class="more-body">Stop guessing which dishes earn their place on the menu. Link each recipe to the Square item it sells as, check your price against cost, and see how every dish performs.</p>
+        </article>
+        <article class="more-card">
+          <div class="more-ico violet" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="6" width="14" height="11" rx="1" /><path d="M15 9h4l3 4v4h-7" /><circle cx="6" cy="19" r="2" /><circle cx="18" cy="19" r="2" />
+            </svg>
+          </div>
+          <h3 class="more-title">Suppliers &amp; budgets</h3>
+          <p class="more-body">Stop guessing whether an order is blowing the budget until the invoice lands. Supplier catalogues, order budgets and invoice reconciliation.</p>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="who">
+      <div class="section-head">
+        <div class="eyebrow">Who it's for</div>
+        <h2 class="section-title">Made for the way venues actually run.</h2>
+      </div>
+      <div class="who-grid">
+        <article class="who-card"><h3>Cafes and restaurants</h3><p>Cost every dish and see margin move when your supplier prices do.</p></article>
+        <article class="who-card"><h3>Bars, pubs and venues</h3><p>Cost house-made batches by ingredients, quantities and yield, and see cost per serve.</p></article>
+        <article class="who-card"><h3>Multi-venue operators</h3><p>Switch stores, compare locations and roll up the group in one screen.</p></article>
       </div>
     </section>
 
@@ -210,6 +347,18 @@
       </div>
     </section>
 
+    <section class="related">
+      <div class="section-head">
+        <div class="eyebrow">Keep exploring</div>
+        <h2 class="section-title">It all works together.</h2>
+      </div>
+      <div class="related-grid">
+        <a class="related-card" href="rostering.html"><h3>Rostering</h3><p>Wage cost live as you build the roster.</p><span class="related-go">Read more →</span></a>
+        <a class="related-card" href="square-integration.html"><h3>Square integration</h3><p>Daily sales powering wage cost and forecasts.</p><span class="related-go">Read more →</span></a>
+        <a class="related-card" href="xero-integration.html"><h3>Xero integration</h3><p>Timesheets to payroll, invoices to bills.</p><span class="related-go">Read more →</span></a>
+      </div>
+    </section>
+
     <section id="contact" class="contact">
       <div class="contact-inner">
         <div class="eyebrow">Get started</div>
@@ -219,6 +368,7 @@
         </p>
         <a href="https://app.croscheq.com/get-started" class="btn-primary" data-trial-cta>Start 30-day free trial</a>
         <p class="contact-note">30 days free. Card required, cancel any time.</p>
+        <p class="contact-price">From <strong>$149.50 a month</strong> for our first 20 founding venues, then $299. <a href="pricing.html">See pricing →</a></p>
         <div class="store-badges">
           <a class="store-badge app-store" href="https://apps.apple.com/app/id6781569242" aria-label="Download on the App Store">
             <img src="assets/app-store-badge.svg" alt="Download on the App Store" width="138" height="46">
@@ -254,5 +404,6 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear()
   </script>
+  <script src="assets/mock-fit.js"></script>
 </body>
 </html>

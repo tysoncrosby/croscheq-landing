@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
   <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
   <link href="https://api.fontshare.com/v2/css?f[]=space-grotesk@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=51" />
+  <link rel="stylesheet" href="styles.css?v=57" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -403,23 +403,17 @@
                 <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
               </svg>
             </div>
-            <h3 class="module-title">Purchasing</h3>
+            <h3 class="module-title">Purchasing &amp; invoices</h3>
             <p class="module-body">
-              Stop re-typing supplier invoices into a spreadsheet. Place orders
-              by supplier or by product across stores. AI reads the invoice,
-              matches it to the order, and posts it to your accounting software
-              as a bill.
+              Stop re-typing supplier invoices into Xero. Forward an invoice by email or upload a photo or PDF, and AI reads it, picks out each product and matches it to the order. It posts to Xero as a bill with the right accounts, and every price is recorded against your product list, so price shifts and recipe costs update as they happen. Place orders by supplier or by product across stores.
             </p>
           </div>
           <div class="feature-mock">
             <div class="app-window">
-              <div class="app-window-body" data-mock="purchasing">
+              <div class="app-window-body" data-mock="bills">
                 <div class="mk-nav">
                   <span class="mk-nav-brand">
-                    <svg viewBox="0 0 100 100" width="15" height="15" fill="none" aria-hidden="true">
-                      <defs><linearGradient id="tick-g5" x1="26" y1="67" x2="70" y2="33" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FF6B35"/><stop offset="1" stop-color="#FFC857"/></linearGradient></defs>
-                      <path d="M26 55 L38 67 L70 33" stroke="url(#tick-g5)" stroke-width="12" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/>
-                    </svg>
+                    <svg viewBox="0 0 100 100" width="15" height="15" fill="none" aria-hidden="true"><defs><linearGradient id="tick-gblh" x1="26" y1="67" x2="70" y2="33" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FF6B35"/><stop offset="1" stop-color="#FFC857"/></linearGradient></defs><path d="M26 55 L38 67 L70 33" stroke="url(#tick-gblh)" stroke-width="12" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="12"/></svg>
                     <span class="wm">CROS<span class="cheq">CHEQ</span></span>
                   </span>
                   <span class="mk-nav-tabs">
@@ -435,44 +429,52 @@
                   </span>
                 </div>
 
-                <div class="mk-head">
-                  <div class="mk-crumb">Purchasing / Orders</div>
-                  <h4 class="mk-title">Place an order <span class="muted">· Riverside Provisions</span></h4>
+                <div class="mk-bl-head">
+                  <div>
+                    <div class="mk-crumb">Purchasing / Bills</div>
+                    <h4 class="mk-title">Bills</h4>
+                  </div>
+                  <div class="mk-bl-tabs"><span class="mk-bl-seg on">Awaiting <i>9</i></span><span class="mk-bl-seg">Published</span><span class="mk-bl-inbox">Inbox</span></div>
                 </div>
 
-                <div class="mk-order">
-                  <div class="mk-order-items">
-                    <div class="mk-oi-head"><span>Product</span><span>Qty</span><span>Line total</span></div>
-                    <div class="mk-oi-row">
-                      <span><div class="mk-oi-prod">Olive oil 4L</div><div class="mk-oi-sku">SKU 21926</div></span>
-                      <span class="mk-oi-stepper"><span class="mk-oi-step">−</span><span class="mk-oi-qty">6</span><span class="mk-oi-step">+</span></span>
-                      <span class="mk-oi-total"><div class="lt">$214.80</div><div class="up">$35.80/ea · GST-free</div></span>
-                    </div>
-                    <div class="mk-oi-row">
-                      <span><div class="mk-oi-prod">Plain flour 12.5kg</div><div class="mk-oi-sku">SKU 14127</div></span>
-                      <span class="mk-oi-stepper"><span class="mk-oi-step">−</span><span class="mk-oi-qty">8</span><span class="mk-oi-step">+</span></span>
-                      <span class="mk-oi-total"><div class="lt">$176.00</div><div class="up">$22.00/ea · GST-free</div></span>
-                    </div>
-                    <div class="mk-oi-row">
-                      <span><div class="mk-oi-prod">Tomatoes tinned</div><div class="mk-oi-sku">SKU 18510</div></span>
-                      <span class="mk-oi-stepper"><span class="mk-oi-step">−</span><span class="mk-oi-qty">24</span><span class="mk-oi-step">+</span></span>
-                      <span class="mk-oi-total"><div class="lt">$92.40</div><div class="up">$3.85/ea · GST-free</div></span>
-                    </div>
-                    <div class="mk-oi-row">
-                      <span><div class="mk-oi-prod">Butter unsalted 500g</div><div class="mk-oi-sku">SKU 14127</div></span>
-                      <span class="mk-oi-stepper"><span class="mk-oi-step">−</span><span class="mk-oi-qty">10</span><span class="mk-oi-step">+</span></span>
-                      <span class="mk-oi-total"><div class="lt">$83.30</div><div class="up">$8.33/ea · GST-free</div></span>
+                <div class="mk-bl-card">
+                  <div class="mk-bl-list">
+                    <div class="mk-bl-search">Search supplier or invoice no…</div>
+                    <div class="mk-bl-row on"><span class="mk-bl-sel"></span><div class="mk-bl-nm"><div class="n">Sunshine Coffee Roasters</div><div class="s">18 Nov 2026 · $1,284.50</div></div><span class="mk-bl-chip">Action</span></div>
+                    <div class="mk-bl-row"><span class="mk-bl-sel"></span><div class="mk-bl-nm"><div class="n">Sunshine Coffee Roasters</div><div class="s">18 Nov 2026 · $412.80</div></div><span class="mk-bl-chip">Action</span></div>
+                    <div class="mk-bl-row"><span class="mk-bl-sel"></span><div class="mk-bl-nm"><div class="n">Riverbend Bakery</div><div class="s">17 Nov 2026 · $186.40</div></div><span class="mk-bl-chip">Action</span></div>
+                    <div class="mk-bl-row"><span class="mk-bl-sel"></span><div class="mk-bl-nm"><div class="n">Local Dairy Co</div><div class="s">16 Nov 2026 · $324.15</div></div><span class="mk-bl-chip">Action</span></div>
+                    <div class="mk-bl-row"><span class="mk-bl-sel"></span><div class="mk-bl-nm"><div class="n">Harbour Produce</div><div class="s">16 Nov 2026 · $268.90</div></div><span class="mk-bl-chip">Action</span></div>
+                    <div class="mk-bl-row"><span class="mk-bl-sel"></span><div class="mk-bl-nm"><div class="n">Coastal Seafood</div><div class="s">15 Nov 2026 · $742.00</div></div><span class="mk-bl-chip">Action</span></div>
+                  </div>
+                  <div class="mk-bl-prev">
+                    <div class="mk-bl-lbl">Invoice preview</div>
+                    <div class="mk-bl-paper">
+                      <div class="pt">Tax Invoice</div>
+                      <div class="pn">SCR-40718</div>
+                      <div class="mk-bl-boxes"><span></span><span></span></div>
+                      <div class="mk-bl-th"><span>Item</span><span>Qty</span><span>Price</span></div>
+                      <div class="mk-bl-bar" style="width:88%"></div><div class="mk-bl-bar" style="width:72%"></div><div class="mk-bl-bar" style="width:80%"></div><div class="mk-bl-bar" style="width:64%"></div><div class="mk-bl-bar" style="width:76%"></div><div class="mk-bl-bar" style="width:58%"></div><div class="mk-bl-bar" style="width:70%"></div><div class="mk-bl-bar" style="width:52%"></div>
                     </div>
                   </div>
-
-                  <div class="mk-summary">
-                    <div class="mk-summary-title">Summary</div>
-                    <div class="mk-sum-label">Delivery date</div>
-                    <div class="mk-sum-date">Wed, 8 Jul 2026</div>
-                    <div class="mk-sum-row"><span>Subtotal (ex GST)</span><span>$566.50</span></div>
-                    <div class="mk-sum-row"><span>GST</span><span>$0.00</span></div>
-                    <div class="mk-sum-row total"><span>Total</span><span>$566.50</span></div>
-                    <div class="mk-sum-btn">Send to supplier →</div>
+                  <div class="mk-bl-form">
+                    <div class="mk-bl-two">
+                      <div class="f"><label>Invoice number</label><div class="fi">SCR-40718</div></div>
+                      <div class="f"><label>Date</label><div class="fi">18 Nov 2026</div></div>
+                    </div>
+                    <div class="f"><label>Supplier</label><div class="fi">Sunshine Coffee Roasters</div></div>
+                    <div class="mk-bl-three">
+                      <div class="f"><label>Subtotal</label><div class="fi">$1,167.73</div></div>
+                      <div class="f"><label>GST</label><div class="fi">$116.77</div></div>
+                      <div class="f"><label>Total</label><div class="fi b">$1,284.50</div></div>
+                    </div>
+                    <div class="mk-bl-pay"><label>Payment</label><span class="mk-bl-toggle"><span class="on">Unpaid</span><span>Paid</span></span></div>
+                    <div class="mk-bl-two">
+                      <div class="f"><label>Due date</label><div class="fi">25 Nov 2026</div></div>
+                      <div class="f"><label>Publish as</label><div class="fi">Purchase (AP Bill)</div></div>
+                    </div>
+                    <div class="f"><label>Xero contact</label><div class="fi">Sunshine Coffee Roasters</div></div>
+                    <div class="mk-bl-btns"><span class="ghost">Open invoice</span><span class="primary">Publish to Xero</span></div>
                   </div>
                 </div>
               </div>
@@ -1126,6 +1128,10 @@
             <summary>Does CrosCheq replace Xero and Square, or work alongside them?</summary>
             <p>Alongside. CrosCheq pulls sales straight from your POS and syncs wages through to Xero. Square is the only POS we integrate with today, and Xero is the only accounting platform, with more on the way. You keep the accounting and payments tools you already use. Rostering, wage cost, purchasing and award interpretation happen in CrosCheq.</p>
           </details>
+                    <details class="faq-item">
+            <summary>How do supplier invoices get into CrosCheq?</summary>
+            <p>Forward them by email or upload a photo or PDF. AI reads each invoice, picks out the products, and prepares it to publish to Xero as a bill. Prices are recorded against your product list, so you see price shifts and recipe costs change as they happen.</p>
+          </details>
           <details class="faq-item">
             <summary>How long does it take to get set up?</summary>
             <p>Most venues are rostering in CrosCheq within a day. Connect your POS and Xero, add your staff and their awards, and you are tracking live wage cost from the first roster you build.</p>
@@ -1159,6 +1165,7 @@
         </p>
         <a href="https://app.croscheq.com/get-started" class="btn-primary" data-trial-cta>Start 30-day free trial</a>
         <p class="contact-note">30 days free. Card required, cancel any time.</p>
+        <p class="contact-price">From <strong>$149.50 a month</strong> for our first 20 founding venues, then $299. <a href="pricing.html">See pricing →</a></p>
         <div class="store-badges">
           <a class="store-badge app-store" href="https://apps.apple.com/app/id6781569242" aria-label="Download on the App Store">
             <img src="assets/app-store-badge.svg" alt="Download on the App Store" width="138" height="46">
